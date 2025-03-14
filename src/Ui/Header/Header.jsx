@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import Logo from "../../assets/Images/logo.svg";
-
+import Btn from "../../Components/Button/Btn";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +36,7 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="header-wrapper">
-          <a href="https://www.avtorim.uz/" className="logo-link">
+          <a href="https://www.enercon.uz/" className="logo-link">
             <img src={Logo} width={250} height={150} alt="Dr Energy Logo" />
           </a>
           <button 
@@ -56,9 +56,8 @@ const Header = () => {
                 </li>
               ))}
               <li className="nav-item" style={{"--item-index": menuItems.length}}>
-                <a className="button-6" role="button" href="#contact" onClick={closeMenu}>
-                 <span className="text">Contact Us</span>
-                </a>
+              
+                <Btn text="Contact Us" onClick={closeMenu} />
               </li>
             </ul>
           </nav>

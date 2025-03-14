@@ -21,7 +21,8 @@ body {
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 
-  background-color: #181818
+  background-color: #fffffe;
+  overflow-x: hidden;
 }
 
 /* 5. Improve media defaults */

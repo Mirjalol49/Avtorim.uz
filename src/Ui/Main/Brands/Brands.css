@@ -1,34 +1,82 @@
 .brands-section {
-    padding: 100px 0;
+    padding: 5rem 0;
+    background: var(--background-light, #f8f9fa);
 }
 
 .brands-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 15px;
-    outline: 3px solid #383838;
-    padding: 10px 20px;
+    text-align: center;
 }
 
 .brands-title {
     font-size: 2.5rem;
-    color: #000;
     font-weight: 700;
-    margin-bottom: 10px;
-    
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #2D3436 0%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.brands-marquee {
+.brands-subtitle {
+    color: var(--text-secondary, #666);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.brand-card {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
 
+.brand-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
 
-.brands-marquee-img {
-    width: 80px;
-    height: auto;
+.brand-card:hover .brand-logo {
+    filter: grayscale(0%);
+}
+
+.brand-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary, #333);
+}
+
+@media (max-width: 768px) {
+    .brands-section {
+        padding: 3rem 0;
+    }
+    
+    .brands-title {
+        font-size: 2rem;
+    }
+    
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }

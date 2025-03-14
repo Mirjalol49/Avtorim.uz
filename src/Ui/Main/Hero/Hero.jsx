@@ -1,40 +1,41 @@
 import React from 'react';
 import './Hero.css';
+import heroImg from '../../../assets/Images/hero1.png';
+
 const Hero = () => {
   return (
-    <section className="hero-section">
+    <section className="hero">
       <div className="container">
         <div className="hero-wrapper">
-          {/* Large Text */}
-          <h1 className="text-3xl  font-semibold tracking-tight md:text-6xl text-center ">
-           TRUSTED{/* eslint-disable-next-line */}
-            <img
-              className="my-auto -mt-3 inline w-24 md:-mt-6 md:w-48"
-              width={192}
-              height={108}
-              src="https://newsroom.porsche.com/dam/jcr:a388376a-c5e2-4363-939b-6fbacd867a64/718_neu_2023.png"
-              alt=""
+          <div className="hero-content">
+            <span className="hero-subtitle">Professional Avto Servis</span>
+            <h1 className="hero-title">
+              Avtomobilingiz uchun Professional Xizmat
+            </h1>
+            <p className="hero-description">
+              15 yillik tajriba va malakali mutaxassislar jamoasi bilan avtomobilingizni 
+              ishonchli qo'llarga topshiring. Zamonaviy uskunalar va sifatli xizmat kafolati.
+            </p>
+            <div className="hero-cta">
+              <button className="primary-btn">
+                Xizmatlarni Ko'rish
+              </button>
+              <button className="secondary-btn">
+                Biz Bilan Bog'lanish
+              </button>
+            </div>
+          </div>
+          
+          <div className="hero-image-wrapper">
+            <img 
+              src={heroImg} 
+              alt="Professional Auto Service" 
+              className="hero-image"
+              loading="eager"
             />
-            AUTO {/* eslint-disable-next-line */}
-            <img
-              className="my-auto -mt-3 inline w-24 md:-mt-6 md:w-48"
-              width={192}
-              height={108}
-              src="https://newsroom.porsche.com/dam/jcr:a388376a-c5e2-4363-939b-6fbacd867a64/718_neu_2023.png"
-              alt=""
-            />
-            REPAIRS EXPERTS {/* eslint-disable-next-line */}
-          </h1>
-          <button class="button-1" role="button">
-  <span class="button-1-shadow"></span>
-  <span class="button-1-edge"></span>
-  <span class="button-1-front text">
-  Get Free Consultation
-  </span>
-</button>
           </div>
         </div>
-      
+      </div>
     </section>
   );
 };
