@@ -1,4 +1,4 @@
-import React from 'react'
+  import React from 'react'
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver'
 
 import Hero from './Hero/Hero'
@@ -11,6 +11,7 @@ import Team from './Team/Team'
 
 const Main = () => {
   const heroRef = useIntersectionObserver()
+  const brandsRef = useIntersectionObserver()
   const servicesRef = useIntersectionObserver()
   const faqRef = useIntersectionObserver()
   const contactRef = useIntersectionObserver()
@@ -19,6 +20,10 @@ const Main = () => {
     <main>
       <section ref={heroRef} className="fade-in">
         <Hero />
+      </section>
+
+      <section ref={brandsRef} className="fade-in">
+        <Brands />
       </section>
       
       <section ref={servicesRef} className="fade-in">

@@ -13,8 +13,8 @@ const Brands = () => {
     <section className='brands-section'>
       <div className="container">
         <div className="brands-wrapper">
-          <h2 className='brands-title'>Our Trusted Partners</h2>
-          <p className="brands-subtitle">Collaborating with leading automotive brands</p>
+          <h2 className='brands-title'>Ishonchli hamkorlarimiz</h2>
+          <p className="brands-subtitle">Yetakchi avtomobil brendlari bilan hamkorlikda ishlash</p>
           
           <div className="brands-grid">
             {[
