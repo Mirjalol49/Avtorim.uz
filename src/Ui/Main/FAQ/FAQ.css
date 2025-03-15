@@ -1,23 +1,11 @@
 .faq-section {
   padding: 6rem 0;
-  background: linear-gradient(180deg, #ffffff 0%, rgba(9, 64, 103, 0.02) 100%);
+ 
   position: relative;
   overflow: hidden;
 }
 
-/* Add subtle background pattern */
-.faq-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: 
-    radial-gradient(rgba(9, 64, 103, 0.03) 1px, transparent 1px),
-    radial-gradient(rgba(9, 64, 103, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
-  opacity: 0.5;
-  z-index: 0;
-}
+
 
 .faq-header {
   text-align: center;

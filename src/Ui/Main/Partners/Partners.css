@@ -1,24 +1,11 @@
 .partners {
   padding: 6rem 0;
-  background: linear-gradient(180deg, #ffffff 0%, rgba(9, 64, 103, 0.02) 100%);
+ 
   position: relative;
   overflow: hidden;
 }
 
-/* Enhanced background pattern */
-.partners::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: 
-    linear-gradient(45deg, rgba(61, 169, 252, 0.03) 0%, transparent 100%),
-    radial-gradient(rgba(9, 64, 103, 0.03) 1px, transparent 1px),
-    radial-gradient(rgba(9, 64, 103, 0.02) 2px, transparent 2px);
-  background-size: 100% 100%, 40px 40px, 60px 60px;
-  background-position: 0 0, 0 0, 20px 20px;
-  opacity: 0.5;
-  z-index: 0;
-}
+
 
 .partners-header {
   text-align: center;

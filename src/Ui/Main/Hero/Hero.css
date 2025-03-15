@@ -2,35 +2,16 @@
 .hero {
   min-height: 100vh;
   padding: 6rem 0;
-  background-color: #f8fafc;
+
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle background pattern for visual interest */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(to right, rgba(9, 64, 103, 0.02), transparent),
-    radial-gradient(rgba(61, 169, 252, 0.03) 2px, transparent 2px);
-  background-size: 100%, 30px 30px;
-  opacity: 0.6;
-  z-index: 0;
-}
 
-.container {
-  position: relative;
-  z-index: 1;
-  width: min(100% - 2rem, 1400px);
-  margin: 0 auto;
-}
+
+
 
 .hero-wrapper {
   display: grid;
