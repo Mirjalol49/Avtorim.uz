@@ -1,6 +1,6 @@
 import React from 'react'
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver'
-import './Main.css'
+
 
 import Hero from './Hero/Hero'
 import Brands from './Brands/Brands'
@@ -22,33 +22,35 @@ const Main = () => {
 
   return (
     <main className="main">
-      <section ref={heroRef} className="fade-in">
-        <Hero />
-      </section>
+      <div className="content-wrapper">
+        <section ref={heroRef} className="fade-in">
+          <Hero />
+        </section>
 
-      <section ref={brandsRef} className="fade-in">
-        <Brands />
-      </section>
-      
-      <section ref={servicesRef} className="fade-in">
-        <Services />
-      </section>
+        <section ref={brandsRef} className="fade-in">
+          <Brands />
+        </section>
+        
+        <section ref={servicesRef} className="fade-in">
+          <Services />
+        </section>
 
-      <section ref={whyUsRef} className="fade-in">
-        <WhyUs />
-      </section>
-      
-      <section ref={faqRef} className="fade-in">
-        <FAQ />
-      </section>
+        <section ref={whyUsRef} className="fade-in">
+          <WhyUs />
+        </section>
+        
+        <section ref={faqRef} className="fade-in">
+          <FAQ />
+        </section>
 
-      <section ref={teamRef} className="fade-in">
-        <Team />
-      </section>
-      
-      <section ref={contactRef} className="fade-in">
-        <Contact />
-      </section>
+        <section ref={teamRef} className="fade-in">
+          <Team />
+        </section>
+        
+        <section ref={contactRef} className="fade-in">
+          <Contact />
+        </section>
+      </div>
     </main>
   )
 }
