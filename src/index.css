@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +12,7 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  scroll-behavior: smooth;
  
 }
 

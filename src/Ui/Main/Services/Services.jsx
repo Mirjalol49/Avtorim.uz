@@ -7,7 +7,7 @@ import Elektrik from "../../../assets/Images/3.png"
 import Vakum from "../../../assets/Images/4.png"
 const Services = () => {
   return (
-    <section className='services'>
+    <section className='services' id="services">
       <div className='container'>
         <h2 className='services-title'>Bizning Xizmatlar</h2>
         <p className='services-subtitle'>Avtomobilingizning ravon va xavfsiz yurishini ta’minlash uchun biz mutaxassis avtomobil ta’mirlash va texnik xizmat ko‘rsatish xizmatlarini taqdim etamiz.</p>

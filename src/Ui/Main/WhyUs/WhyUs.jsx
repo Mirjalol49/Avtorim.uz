@@ -6,7 +6,7 @@ import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 
 const WhyUs = () => {
   return (
-    <section className="why-us">
+    <section className="why-us" id="whyus">
       <div className="container">
         <div className="why-us-header">
           <span className="why-us-badge">Nega Aynan Biz?</span>

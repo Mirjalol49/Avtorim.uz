@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import Logo from '../../assets/Images/logo.png';
+import Logo from '../../assets/Images/logo.svg';
+
 
 const Footer = () => {
   return (
@@ -52,11 +53,11 @@ const Footer = () => {
               <ul className="contact-info">
                 <li>
                   <i className="fas fa-map-marker-alt"></i>
-                  Toshkent sh, Chilonzor t, Bunyodkor ko'chasi, 15-uy
+                 Toshkent sh. Sergeli t, Index Bozor H8 Blok
                 </li>
                 <li>
                   <i className="fas fa-phone"></i>
-                  +998 90 123 45 67
+                  +998 95 816 08 88
                 </li>
                 <li>
                   <i className="fas fa-clock"></i>

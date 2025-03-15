@@ -8,7 +8,7 @@ import team4 from '../../../assets/Images/josh.jpg';
 
 const Team = () => {
   return (
-    <section id="team" className="team-section">
+    <section id="team" className="team-section" id="team">
       <div className="container">
         <div className="team-header">
           <span className="team-badge">Professional Jamoa</span>

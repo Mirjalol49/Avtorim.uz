@@ -26,18 +26,18 @@ const Header = () => {
   };
 
   const menuItems = [
-    { href: "#services", text: "Services" },
-    { href: "#about", text: "About us" },
-    { href: "#projects", text: "Projects" },
-    { href: "#faq", text: "FAQ" }
+    { href: "#services", text: "Xizmatlar" },
+    { href: "#whyus", text: "Nega aynan biz" },
+    { href: "#team", text: "Jamoa" },
+    { href: "#contact", text: "Aloqa" }
   ];
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="header-wrapper">
-          <a href="https://www.enercon.uz/" className="logo-link">
-            <img src={Logo} width={250} height={150} alt="Dr Energy Logo" />
+          <a href="https://www.avtorim.uz/" className="logo-link">
+            <img src={Logo} width={250} height={150} alt="avtorim" />
           </a>
           <button 
             className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`} 
