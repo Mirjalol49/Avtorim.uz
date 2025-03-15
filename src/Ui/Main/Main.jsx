@@ -6,7 +6,7 @@ import Hero from './Hero/Hero'
 import Brands from './Brands/Brands'
 import Showcase from './Showcase/Showcase'
 import Services from './Services/Services'
-import Faq from './Faq/Faq'
+import FAQ from './FAQ/FAQ'
 import Contact from './Contact/Contact'
 import Team from './Team/Team'
 import WhyUs from './WhyUs/WhyUs'
@@ -39,7 +39,7 @@ const Main = () => {
       </section>
       
       <section ref={faqRef} className="fade-in">
-        <Faq />
+        <FAQ />
       </section>
 
       <section ref={teamRef} className="fade-in">
