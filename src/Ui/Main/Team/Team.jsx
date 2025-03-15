@@ -1,83 +1,122 @@
 import React from 'react';
 import './Team.css';
 
-const Team = () => {
-  const teamMembers = [
-    {
-      name: "Aziz Karimov",
-      position: "Bosh Mexanik",
-      image: "team1.jpg",
-      experience: "12 yillik tajriba",
-      specialization: "Dvigatel tizimi bo'yicha mutaxassis",
-      certifications: ["Oliy toifali mutaxassis", "BMW bo'yicha mutaxassis"]
-    },
-    {
-      name: "Jamshid Rahimov",
-      position: "Kuzov Ustasi",
-      image: "team2.jpg",
-      experience: "8 yillik tajriba",
-      specialization: "Kuzov ta'mirlash va bo'yash ishlari",
-      certifications: ["3M sertifikati", "PPG sertifikati"]
-    },
-    {
-      name: "Sardor Umarov",
-      position: "Elektrik Mutaxassis",
-      image: "team3.jpg",
-      experience: "10 yillik tajriba",
-      specialization: "Elektr tizimlari diagnostikasi",
-      certifications: ["Bosch sertifikati", "Launch Tech mutaxassisi"]
-    },
-    {
-      name: "Dilshod Ahmedov",
-      position: "Diagnostika Mutaxassisi",
-      image: "team4.jpg",
-      experience: "7 yillik tajriba",
-      specialization: "Kompyuter diagnostikasi",
-      certifications: ["OBD mutaxassisi", "Scanner Pro sertifikati"]
-    }
-  ];
+import team1 from '../../../assets/Images/josh.jpg';
+import team2 from '../../../assets/Images/josh.jpg';
+import team3 from '../../../assets/Images/josh.jpg';
+import team4 from '../../../assets/Images/josh.jpg';
 
+const Team = () => {
   return (
     <section id="team" className="team-section">
       <div className="container">
         <div className="team-header">
-          <span className="section-subtitle">Bizning Jamoa</span>
-          <h2 className="section-title">Tajribali Mutaxassislar</h2>
-          <p className="section-description">
-            Professional va tajribali mutaxassislarimiz avtomobilingizga eng yaxshi xizmatni ko'rsatishga tayyor
+          <span className="team-badge">Professional Jamoa</span>
+          <h2 className="team-title">Bizning Mutaxassislar</h2>
+          <p className="team-subtitle">
+            15 yillik tajriba va malakali mutaxassislar jamoasi bilan avtomobilingizni ishonchli qo'llarga topshiring
           </p>
         </div>
 
         <div className="team-grid">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="team-card fade-in">
-              <div className="member-info">
-                <h3 className="member-name">{member.name}</h3>
-                <p className="member-position">{member.position}</p>
-                <p className="member-experience">{member.experience}</p>
-                <p className="member-specialization">{member.specialization}</p>
-                <div className="member-certifications">
-                  {member.certifications.map((cert, idx) => (
-                    <span key={idx} className="certification-badge">{cert}</span>
-                  ))}
-                </div>
-              </div>
+          <div className="team-card">
+            <div className="member-image-wrapper">
               <img 
-                src={require(`../../../assets/Images/${member.image}`)} 
-                alt={member.name}
+                src={team1}
+                alt="Aziz Karimov" 
                 className="member-image"
               />
+              <div className="member-social">
+                <a href="#" className="social-link"><i className="fab fa-telegram"></i></a>
+                <a href="#" className="social-link"><i className="fab fa-instagram"></i></a>
+                <a href="#" className="social-link"><i className="fab fa-facebook"></i></a>
+              </div>
             </div>
-          ))}
+            <div className="member-info">
+              <h3 className="member-name">Aziz Karimov</h3>
+              <p className="member-position">Bosh Mexanik</p>
+              <p className="member-experience">12 yillik tajriba</p>
+              <div className="member-specialties">
+                <span className="specialty-tag">BMW Mutaxassisi</span>
+                <span className="specialty-tag">Dvigatel Tizimi</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <div className="member-image-wrapper">
+              <img 
+                  src={team2}
+                alt="Jamshid Rahimov" 
+                className="member-image"
+              />
+              <div className="member-social">
+                <a href="#" className="social-link"><i className="fab fa-telegram"></i></a>
+                <a href="#" className="social-link"><i className="fab fa-instagram"></i></a>
+                <a href="#" className="social-link"><i className="fab fa-facebook"></i></a>
+              </div>
+            </div>
+            <div className="member-info">
+              <h3 className="member-name">Jamshid Rahimov</h3>
+              <p className="member-position">Kuzov Ustasi</p>
+              <p className="member-experience">8 yillik tajriba</p>
+              <div className="member-specialties">
+                <span className="specialty-tag">Kuzov Ta'mirlash</span>
+                <span className="specialty-tag">Bo'yash Ishlari</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <div className="member-image-wrapper">
+              <img 
+                src={team3}
+                alt="Sardor Umarov" 
+                className="member-image"
+              />
+              <div className="member-social">
+                <a href="#" className="social-link"><i className="fab fa-telegram"></i></a>
+                <a href="#" className="social-link"><i className="fab fa-instagram"></i></a>
+                <a href="#" className="social-link"><i className="fab fa-facebook"></i></a>
+              </div>
+            </div>
+            <div className="member-info">
+              <h3 className="member-name">Sardor Umarov</h3>
+              <p className="member-position">Elektrik Mutaxassis</p>
+              <p className="member-experience">10 yillik tajriba</p>
+              <div className="member-specialties">
+                <span className="specialty-tag">Elektr Tizimi</span>
+                <span className="specialty-tag">Diagnostika</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <div className="member-image-wrapper">
+              <img 
+                src={team4}
+                alt="Dilshod Ahmedov" 
+                className="member-image"
+              />
+              <div className="member-social">
+                <a href="#" className="social-link"><i className="fab fa-telegram"></i></a>
+                <a href="#" className="social-link"><i className="fab fa-instagram"></i></a>
+                <a href="#" className="social-link"><i className="fab fa-facebook"></i></a>
+              </div>
+            </div>
+            <div className="member-info">
+              <h3 className="member-name">Dilshod Ahmedov</h3>
+              <p className="member-position">Diagnostika Mutaxassisi</p>
+              <p className="member-experience">7 yillik tajriba</p>
+              <div className="member-specialties">
+                <span className="specialty-tag">Kompyuter Diagnostika</span>
+                <span className="specialty-tag">Scanner Pro</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="team-cta">
-          <div className="cta-content">
-            <h3>Tajribali Mutaxassislar</h3>
-            <p>Bizning tajribali mutaxassislarimiz avtomobilingizga eng yaxshi xizmatni ko'rsatishga tayyor</p>
-          </div>
-          <a href="#contact" className="button-6">Biz bilan bog'laning</a>
-        </div>
+       
       </div>
     </section>
   );

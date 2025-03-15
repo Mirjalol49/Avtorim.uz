@@ -1,5 +1,5 @@
 .partners {
-  padding: 8rem 0;
+  padding: 6rem 0;
   background: linear-gradient(180deg, #ffffff 0%, rgba(9, 64, 103, 0.02) 100%);
   position: relative;
   overflow: hidden;
@@ -77,78 +77,46 @@
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .partner-card {
   background: white;
-  padding: 2.5rem;
-  border-radius: 20px;
+  padding: 2rem;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   border: 1.5px solid #e2e8f0;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.partner-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(61, 169, 252, 0.05), rgba(9, 64, 103, 0.05));
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: all 0.3s ease;
 }
 
 .partner-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
   border-color: #3da9fc;
-  box-shadow: 0 20px 40px rgba(9, 64, 103, 0.1);
-}
-
-.partner-card:hover::before {
-  opacity: 1;
-}
-
-.partner-logo-wrapper {
-  width: 150px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: white;
-  padding: 2rem;
-  box-shadow: 0 8px 24px rgba(9, 64, 103, 0.06);
-  transition: all 0.4s ease;
+  box-shadow: 0 15px 30px rgba(9, 64, 103, 0.1);
 }
 
 .partner-logo {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 50px; /* Adjust this value based on your logo sizes */
+  object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.7;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 
 .partner-card:hover .partner-logo {
   filter: grayscale(0%);
   opacity: 1;
-  transform: scale(1.1);
 }
 
 .partner-name {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #094067;
   margin: 0;
-  transition: color 0.3s ease;
-}
-
-.partner-card:hover .partner-name {
-  color: #3da9fc;
 }
 
 @media (max-width: 1024px) {
@@ -187,17 +155,17 @@
   }
 
   .partners-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
-  .partner-card {
-    padding: 2rem;
+  .partner-logo {
+    height: 40px; /* Smaller logos on mobile */
   }
+}
 
-  .partner-logo-wrapper {
-    width: 120px;
-    height: 120px;
+@media (max-width: 480px) {
+  .partners-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 } 
