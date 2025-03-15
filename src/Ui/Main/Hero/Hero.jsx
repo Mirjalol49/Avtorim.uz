@@ -17,12 +17,12 @@ const Hero = () => {
               ishonchli qo'llarga topshiring. Zamonaviy uskunalar va sifatli xizmat kafolati.
             </p>
             <div className="hero-cta">
-              <button className="primary-btn">
+              <a href="#services" className="primary-btn">
                 Xizmatlarni Ko'rish
-              </button>
-              <button className="secondary-btn">
+              </a>
+              <a href="#contact" className="secondary-btn">
                 Biz Bilan Bog'lanish
-              </button>
+              </a>
             </div>
           </div>
           

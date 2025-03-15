@@ -57,7 +57,7 @@ const Header = () => {
               ))}
               <li className="nav-item" style={{"--item-index": menuItems.length}}>
               
-                <Btn text="Contact Us" onClick={closeMenu} />
+                <Btn text="Bepul Konsultatsiya " onClick={closeMenu} />
               </li>
             </ul>
           </nav>

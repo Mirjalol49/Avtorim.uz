@@ -26,8 +26,8 @@ const Contact = () => {
               <div className="info-icon">📞</div>
               <div>
                 <h3>Telefon</h3>
-                <p>+998 90 123 45 67</p>
-                <p>+998 90 987 65 43</p>
+                <p>+998 95 736 66 11</p>
+                <p>+998 90 94 769 61 00</p>
               </div>
             </div>
 
@@ -55,14 +55,13 @@ const Contact = () => {
           </div>
 
           <div className="map-container">
-            <iframe
-              title="location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3!2d69.2!3d41.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE4JzM2LjAiTiA2OcKwMTInMDAuMCJF!5e0!3m2!1sen!2s!4v1234567890!5m2!1sen!2s"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2923.782871096112!2d69.23897507605017!3d41.2008699713242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEyJzAzLjEiTiA2OcKwMTQnMjkuNiJF!5e1!3m2!1sen!2s!4v1742041436222!5m2!1sen!2s" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
