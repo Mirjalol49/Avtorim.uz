@@ -25,6 +25,15 @@ const Header = () => {
     document.body.style.overflow = 'auto';
   };
 
+  const scrollToSection = (e, href) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      closeMenu();
+    }
+  };
+
   const menuItems = [
     { href: "#services", text: "Xizmatlar" },
     { href: "#whyus", text: "Nega aynan biz" },
@@ -50,13 +59,16 @@ const Header = () => {
             <ul className="nav-list">
               {menuItems.map((item, index) => (
                 <li key={item.href} className="nav-item" style={{"--item-index": index}}>
-                  <a className="nav-item_link" href={item.href} onClick={closeMenu}>
+                  <a 
+                    className="nav-item_link" 
+                    href={item.href} 
+                    onClick={(e) => scrollToSection(e, item.href)}
+                  >
                     {item.text}
                   </a>
                 </li>
               ))}
               <li className="nav-item" style={{"--item-index": menuItems.length}}>
-              
                 <Btn text="Bepul Konsultatsiya " onClick={closeMenu} />
               </li>
             </ul>

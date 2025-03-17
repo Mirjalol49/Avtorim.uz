@@ -1,66 +1,85 @@
-import React from 'react'
-import './Service.css'
+import React from 'react';
+import './Service.css';
+import { FaCar, FaCogs, FaBolt, FaWind } from 'react-icons/fa';
 
-import Kuzov from "../../../assets/Images/1one.webp" 
-import Dvigatel from "../../../assets/Images/2one.jpeg"
-import Elektrik from "../../../assets/Images/3.png"
-import Vakum from "../../../assets/Images/4.png"
+import Kuzov from "../../../assets/Images/1one.webp";
+import Dvigatel from "../../../assets/Images/2one.jpeg";
+import Elektrik from "../../../assets/Images/3.png";
+import Vakum from "../../../assets/Images/4.png";
+
 const Services = () => {
+  const services = [
+    {
+      icon: <FaCar />,
+      image: Kuzov,
+      title: "Avtomobil Ta'mirlash",
+      description: "Avtomobilning barcha xususiyatlari va texnik xizmatlarini ta'mirlash",
+      features: [
+        "Turtgan joylarini to'g'irlash",
+        "Bo'yash ishlari",
+        "Panel Almashtirish"
+      ]
+    },
+    {
+      icon: <FaCogs />,
+      image: Dvigatel,
+      title: "Dvigatel Ta'mirlash",
+      description: "To'liq dvigatel diagnostikasi va ta'mirlash yechimlari",
+      features: [
+        "Dvigatel Diagnostikasi",
+        "Ehtiyoj qismlarini Almashtirish",
+        "Dvigatelni Sozlash"
+      ]
+    },
+    {
+      icon: <FaBolt />,
+      image: Elektrik,
+      title: "Elektrik Diagnostikasi",
+      description: "Zamonaviy elektr tizimlarini diagnostikasi va ta'mirlash",
+      features: [
+        "Tizim Tekshiruvi",
+        "Kabel Tamirlash",
+        "Akkumulyator Xizmati"
+      ]
+    },
+    {
+      icon: <FaWind />,
+      image: Vakum,
+      title: "Vakum Tizimlari",
+      description: "Vakum tizimlarini professional ta'mirlash",
+      features: [
+        "Turtgan joylarini to'g'irlash",
+        "Bo'yash ishlari",
+        "Panel Almashtirish"
+      ]
+    }
+  ];
+
   return (
     <section className='services' id="services">
       <div className='container'>
         <h2 className='services-title'>Bizning Xizmatlar</h2>
-        <p className='services-subtitle'>Avtomobilingizning ravon va xavfsiz yurishini ta’minlash uchun biz mutaxassis avtomobil ta’mirlash va texnik xizmat ko‘rsatish xizmatlarini taqdim etamiz.</p>
-        <ul className='services-list'>
-          <li className='services-item'>
-            <img className='services-item-image' src={Kuzov} alt="Kuzov" />
-            <div className='services-item-wrapper'>
-              <h3 className='services-item-title'>Avtomobil Ta’mirlash</h3>
-              <p className='services-item-description'>Avtomobilning barcha xususiyatlari va texnik xizmatlarini ta’mirlash</p>
-              <p className='services-item-list-item'>✅ Turtgan joylarini to'g'irlash</p>
-              <p className='services-item-list-item'>✅ Bo'yash ishlari</p> 
-              <p className='services-item-list-item'>✅ Panel Almashtirish</p> 
+        <p className='services-subtitle'>Avtomobilingizning ravon va xavfsiz yurishini ta'minlash uchun biz mutaxassis avtomobil ta'mirlash va texnik xizmat ko'rsatish xizmatlarini taqdim etamiz.</p>
+        <div className='services-list'>
+          {services.map((service, index) => (
+            <div key={index} className='services-item'>
+              <img className='services-item-image' src={service.image} alt={service.title} />
+              <div className='services-item-content'>
+                <div className='services-item-icon'>{service.icon}</div>
+                <h3 className='services-item-title'>{service.title}</h3>
+                <p className='services-item-description'>{service.description}</p>
+                <ul className='services-item-features'>
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className='services-item-feature'>✅ {feature}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            </li>
-
-            <li className='services-item'>
-            <img className='services-item-image' src={Dvigatel} alt="Kuzov" />
-            <div className='services-item-wrapper'>
-              <h3 className='services-item-title'>Dvigatel Ta’mirlash</h3>
-              <p className='services-item-description'>To'liq dvigatel diagnostikasi va ta’mirlash yechimlari</p>
-              <p className='services-item-list-item'>✅ Dvigatel Diagnostikasi</p>
-              <p className='services-item-list-item'>✅ Ehtiyoj qismlarini Almashtirish</p> 
-              <p className='services-item-list-item'>✅ Dvigatelni Sozlash</p> 
-            </div>
-            </li>
-
-
-            <li className='services-item'>
-            <img className='services-item-image' src={Elektrik} alt="Kuzov" />
-            <div className='services-item-wrapper'>
-              <h3 className='services-item-title'>Elektrik Diagnostikasi</h3>
-              <p className='services-item-description'>Zamonaviy elektr tizimlarini diagnostikasi va ta’mirlash</p>
-              <p className='services-item-list-item'>✅ Tizim Tekshiruvi</p>
-              <p className='services-item-list-item'>✅ Kabel Tamirlash</p> 
-              <p className='services-item-list-item'>✅ Akkumulyator Xizmati</p> 
-            </div>
-            </li>
-
-
-            <li className='services-item'>
-            <img className='services-item-image' src={Vakum} alt="Kuzov" />
-            <div className='services-item-wrapper'>
-              <h3 className='services-item-title'>Vakum Tizimlari</h3>
-              <p className='services-item-description'>Vakum tizimlarini professional ta'mirlash</p>
-              <p className='services-item-list-item'>✅ Turtgan joylarini to'g'irlash</p>
-              <p className='services-item-list-item'>✅ Bo'yash ishlari</p> 
-              <p className='services-item-list-item'>✅ Panel Almashtirish</p> 
-            </div>
-            </li>
-        </ul>
+          ))}
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
