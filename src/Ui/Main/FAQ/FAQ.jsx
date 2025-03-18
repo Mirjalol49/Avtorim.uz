@@ -27,7 +27,7 @@ const FAQ = () => {
     },
     {
       question: "Diagnostika pullikmi?",
-      answer: "Dastlabki ko'rik bepul. Chuqurlashtirilgan diagnostika xizmati pullik, ammo keyinchalik ta'mirlash ishlarini bizda amalga oshirsangiz, diagnostika narxi umumiy summadan chegirilib beriladi."
+      answer: "Dastlabki ko'rik bepul. Chuqurlashtirilgan diagnostika xizmati pullik, ammo keyinchalik ta'mirlash ishlarini bizda amalga oshirsangiz, diagnostika narxi umumiy summadan chegirma qilib beriladi."
     }
   ];
 

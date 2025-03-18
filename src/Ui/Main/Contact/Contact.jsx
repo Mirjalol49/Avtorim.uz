@@ -1,7 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import './Contact.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '+998 ',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    
+    // Prevent phone number country code deletion
+    if (name === 'phone' && !value.startsWith('+998')) {
+      return;
+    }
+    
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    const botToken = '7816376176:AAHi59iDtRdHC4zR88jbxelRYJGv-ZJLSV4';
+    const chatId = '1907166652';
+    const message = `📨 Yangi xabar!\n\nIsmi: ${formData.name}\nTelefon: ${formData.phone}\nXabar: ${formData.message}`;
+
+    try {
+      const response = await axios.get(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        params: {
+          chat_id: chatId,
+          text: message
+        }
+      });
+      
+      console.log('Telegram response:', response);
+      alert('Xabaringiz yuborildi! Tez orada aloqaga chiqamiz');
+      setFormData({
+        name: '',
+        phone: '+998 ',
+        message: ''
+      });
+      
+    } catch (error) {
+      console.error('Xatolik:', error);
+      alert('Xabar yuborishda xatolik, iltimos qayta urunib koʻring');
+    }
+  };
+
   return (
     <section id="contact" className="contact-section">
       <div className="container">
@@ -18,7 +68,7 @@ const Contact = () => {
               <div className="info-icon">📍</div>
               <div>
                 <h3>Manzil</h3>
-                <p>Toshkent sh, Chilonzor t, Bunyodkor ko'chasi, 15-uy</p>
+                <p>Toshkent sh. Sergeli t, Index Bozor H8 Blok</p>
               </div>
             </div>
 
@@ -40,15 +90,36 @@ const Contact = () => {
               </div>
             </div>
 
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <input type="text" placeholder="Ismingiz" required />
+                <input 
+                  type="text" 
+                  name="name"
+                  placeholder="Ismingiz" 
+                  required 
+                  value={formData.name}
+                  onChange={handleChange}
+                />
               </div>
               <div className="form-group">
-                <input type="tel" placeholder="Telefon raqamingiz" required />
+                <input 
+                  type="tel" 
+                  name="phone"
+                  placeholder="Telefon raqamingiz" 
+                  required 
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
               </div>
               <div className="form-group">
-                <textarea placeholder="Xabaringiz" rows="4" required></textarea>
+                <textarea 
+                  name="message"
+                  placeholder="Xabaringiz" 
+                  rows="4" 
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
               </div>
               <button type="submit" className="submit-btn">Yuborish</button>
             </form>
@@ -71,4 +142,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
