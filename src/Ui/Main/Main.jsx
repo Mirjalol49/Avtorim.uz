@@ -4,7 +4,7 @@ import { useIntersectionObserver } from '../../hooks/useIntersectionObserver'
 
 import Hero from './Hero/Hero'
 import Brands from './Brands/Brands'
-import Showcase from './Showcase/Showcase'
+import Video from './Video/Video'
 import Services from './Services/Services'
 import FAQ from './FAQ/FAQ'
 import Contact from './Contact/Contact'
@@ -37,6 +37,10 @@ const Main = () => {
 
         <section ref={whyUsRef} className="fade-in">
           <WhyUs />
+        </section>
+
+        <section className="fade-in">
+          <Video />
         </section>
         
         <section ref={faqRef} className="fade-in">
