@@ -59,20 +59,20 @@ const VideoNewsSection = () => {
         },
         url: "https://player.vimeo.com/video/1066830240?h=10294929cb",
       },
-      // {
-      //   id: 4,
-      //   title: {
-      //     en: "Brake System Check",
-      //     ru: "Проверка Тормозной Системы",
-      //     uz: "Tormoz Tizimini Tekshirish"
-      //   },
-      //   description: {
-      //     en: "Our specialists explain the process of checking and repairing brake systems",
-      //     ru: "Наши специалисты объясняют процесс проверки и ремонта тормозных систем",
-      //     uz: "Mutaxassislarimiz tormoz tizimini tekshirish va ta'mirlash jarayonini tushuntiradilar"
-      //   },
-      //   url: "https://player.vimeo.com/video/1066830117?h=ecdc03ff46",
-      // },
+      {
+        id: 4,
+        title: {
+          en: "Brake System Check",
+          ru: "Проверка Тормозной Системы",
+          uz: "Tormoz Tizimini Tekshirish"
+        },
+        description: {
+          en: "Our specialists explain the process of checking and repairing brake systems",
+          ru: "Наши специалисты объясняют процесс проверки и ремонта тормозных систем",
+          uz: "Mutaxassislarimiz tormoz tizimini tekshirish va ta'mirlash jarayonini tushuntiradilar"
+        },
+        url: "https://player.vimeo.com/video/1066830117?h=ecdc03ff46",
+      },
     ]
   };
 

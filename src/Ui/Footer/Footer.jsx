@@ -114,7 +114,7 @@ const Footer = () => {
                 </li>
                 <li className="contact-item">
                   <i className="fas fa-clock contact-icon"></i>
-                  <span>24/7 {getText('footer.workingHours', language)}</span>
+                  <span>24/7 {getText('', language)}</span>
                 </li>
                 <li className="contact-item">
                   <i className="fab fa-telegram contact-icon"></i>
