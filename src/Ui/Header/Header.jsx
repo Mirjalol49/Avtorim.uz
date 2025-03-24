@@ -39,7 +39,6 @@ const Header = () => {
   const scrollToSection = (e, href) => {
     e.preventDefault();
     
-    // If we're not on the home page, navigate to home first
     if (!isHomePage) {
       window.location.href = '/' + href;
       return;
@@ -82,13 +81,13 @@ const Header = () => {
           <button 
             className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`} 
             onClick={toggleMenu}
-            aria-label={isMenuOpen ? "Menyuni yopish" : "Menyuni ochish"}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
           >
-            <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
+            <span className="hamburger"></span>
           </button>
           
-          <nav className={`nav ${isMenuOpen ? 'active' : ''}`} aria-label="Asosiy navigatsiya">
+          <nav className={`nav ${isMenuOpen ? 'active' : ''}`} aria-label="Main navigation">
             <ul className="nav-list">
               {isHomePage && homeMenuItems.map((item, index) => (
                 <li key={item.href} className="nav-item" style={{"--item-index": index}}>
@@ -108,22 +107,16 @@ const Header = () => {
                   to="/shop"
                   onClick={closeMenu}
                 >
-                  <svg className="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style={{marginRight: '6px'}}>
-                    <path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/>
-                  </svg>
                   {shopMenuText[language]}
                 </Link>
               </li>
               
               <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 1 : 1}}>
                 <Link 
-                  className={`nav-item_link cart-link ${location.pathname === '/cart' ? 'active' : ''}`} 
+                  className={`nav-item_link ${location.pathname === '/cart' ? 'active' : ''}`} 
                   to="/cart"
                   onClick={closeMenu}
                 >
-                  <svg className="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style={{marginRight: '6px'}}>
-                    <path d="M17 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm0-3l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1v2h2l3.6 7.59L3.62 17H19v-2H7z"/>
-                  </svg>
                   {cartMenuText[language]}
                   {getCartCount() > 0 && <span className="cart-count">{getCartCount()}</span>}
                 </Link>
@@ -133,15 +126,14 @@ const Header = () => {
                 <ThemeToggle />
               </li>
               
-              <li className="nav-item language-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 3 : 3}}>
+              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 3 : 3}}>
                 <LanguageSwitcher />
               </li>
               
-              <li className="nav-item btn-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 4 : 4}}>
+              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 4 : 4}}>
                 <Btn 
-                  text={getText("header.freeConsultation", language, "Konsultatsiya")} 
+                  text={getText("header.freeConsultation", language, "Consultation")} 
                   onClick={(e) => scrollToSection(e, "#contact")} 
-                  href="#contact"
                   className="header-cta-btn" 
                 />
               </li>
