@@ -17,10 +17,12 @@
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
+  overflow: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--background);
 }

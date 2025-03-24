@@ -8,6 +8,7 @@ import ThemeToggle from "../../Components/ThemeToggle/ThemeToggle";
 import { useLanguage } from "../../hooks/useLanguage.jsx";
 import { useShoppingCart } from "../../hooks/useShoppingCart.jsx";
 import { getText } from "../../utils/translate";
+import { ShoppingBag, ShoppingCart } from 'lucide-react'; // Import icons
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,6 +108,7 @@ const Header = () => {
                   to="/shop"
                   onClick={closeMenu}
                 >
+                  <ShoppingBag size={20} className="menu-icon" />
                   {shopMenuText[language]}
                 </Link>
               </li>
@@ -117,6 +119,7 @@ const Header = () => {
                   to="/cart"
                   onClick={closeMenu}
                 >
+                  <ShoppingCart size={20} className="menu-icon" />
                   {cartMenuText[language]}
                   {getCartCount() > 0 && <span className="cart-count">{getCartCount()}</span>}
                 </Link>
