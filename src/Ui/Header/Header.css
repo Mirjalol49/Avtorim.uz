@@ -18,11 +18,7 @@
     box-shadow: 0 4px 20px var(--shadow-strong);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+
 
 .header-wrapper {
     display: flex;

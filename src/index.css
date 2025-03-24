@@ -102,11 +102,7 @@ h3 { font-size: clamp(1.25rem, 3vw, 2rem); }
   padding: 0 1.5rem;
 }
 
-@media (max-width: 640px) {
-  .container {
-    padding: 0 1rem;
-  }
-}
+
 
 .section-padding {
   padding: 5rem 0;
