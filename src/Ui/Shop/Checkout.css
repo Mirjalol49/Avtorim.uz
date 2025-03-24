@@ -1,0 +1,321 @@
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.checkout-title {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: var(--text-primary);
+}
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 30px;
+}
+
+/* Form Styles */
+.checkout-form-container {
+  background-color: var(--form-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px var(--shadow);
+  padding: 25px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-primary);
+  outline: none;
+}
+
+.form-error {
+  background-color: #ffebee;
+  color: #e53935;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.checkout-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+
+.back-button {
+  padding: 12px 20px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.back-button:hover:not(:disabled) {
+  background-color: var(--border-color);
+}
+
+.back-button:disabled,
+.order-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.order-button {
+  padding: 12px 20px;
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-button:hover:not(:disabled) {
+  background-color: var(--accent-primary-dark, #0074db);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.spinner-icon {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Order Summary Styles */
+.order-summary {
+  background-color: var(--form-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px var(--shadow);
+  padding: 25px;
+  align-self: start;
+}
+
+.order-summary h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.summary-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.item-name {
+  font-weight: 500;
+}
+
+.item-quantity {
+  text-align: center;
+}
+
+.item-price {
+  text-align: right;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid var(--border-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+/* Empty Cart Notice */
+.empty-checkout {
+  text-align: center;
+  padding: 50px 0;
+  background-color: var(--form-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.empty-checkout p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.continue-shopping-button {
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.continue-shopping-button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Order Success Screen */
+.order-success {
+  text-align: center;
+  padding: 50px 0;
+  background-color: var(--form-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 0 auto 20px;
+}
+
+.order-success h2 {
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.order-success p {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .checkout-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .back-button, .place-order-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-header, .summary-item {
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+}
+
+/* Override for dark mode opacity issues */
+[data-theme="dark"] .checkout-form-container,
+[data-theme="dark"] .order-summary,
+[data-theme="dark"] .summary-items,
+[data-theme="dark"] .summary-item,
+[data-theme="dark"] .back-button,
+[data-theme="dark"] .place-order-button {
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .form-group label {
+  color: var(--text-primary);
+  opacity: 1;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border-color: var(--input-border);
+  opacity: 1;
+}
+
+[data-theme="dark"] .place-order-button {
+  background-color: #4caf50;
+  color: white;
+} 

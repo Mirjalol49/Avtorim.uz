@@ -1,0 +1,318 @@
+.founders-section {
+  position: relative;
+  padding: 7rem 0;
+  background: linear-gradient(to bottom, #f1f5f9, #f8fafc);
+  overflow: hidden;
+}
+
+.founders-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.founders-badge {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, rgba(61, 169, 252, 0.1), rgba(9, 64, 103, 0.1));
+  color: #094067;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(9, 64, 103, 0.05);
+}
+
+.founders-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #094067 0%, #3da9fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.founders-subtitle {
+  font-size: 1.2rem;
+  color: #5f6c7b;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Leadership container styles */
+.leadership-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.leadership-card {
+  position: relative;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(9, 64, 103, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.leadership-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(9, 64, 103, 0.12);
+}
+
+.founder-card {
+  border-top: 5px solid #3da9fc;
+}
+
+.investor-card {
+  border-top: 5px solid #ef4565;
+}
+
+.leadership-role {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  z-index: 10;
+}
+
+.role-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 12px rgba(9, 64, 103, 0.15);
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.leadership-card:hover .role-badge {
+  transform: translateY(0);
+}
+
+.founder-card .role-badge {
+  color: #3da9fc;
+}
+
+.investor-card .role-badge {
+  color: #ef4565;
+}
+
+.role-text {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.leadership-content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 0;
+}
+
+.leadership-image-container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.leadership-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.leadership-card:hover .leadership-image {
+  transform: scale(1.05);
+}
+
+.leadership-details {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.leadership-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #094067;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  position: relative;
+}
+
+.leadership-name::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.founder-card .leadership-name::after {
+  background: #3da9fc;
+}
+
+.investor-card .leadership-name::after {
+  background: #ef4565;
+}
+
+.leadership-description {
+  color: #5f6c7b;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.leadership-quote {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-style: italic;
+  color: #094067;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.founder-card .leadership-quote {
+  background: rgba(61, 169, 252, 0.08);
+}
+
+.investor-card .leadership-quote {
+  background: rgba(239, 69, 101, 0.08);
+}
+
+.quote-icon {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.founder-card .quote-icon {
+  color: #3da9fc;
+}
+
+.investor-card .quote-icon {
+  color: #ef4565;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1100px) {
+  .leadership-content {
+    grid-template-columns: 300px 1fr;
+  }
+  
+  .leadership-name {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .leadership-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px auto;
+  }
+  
+  .founders-section {
+    padding: 5rem 0;
+  }
+  
+  .leadership-container {
+    gap: 4rem;
+  }
+  
+  .leadership-role {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .founders-title {
+    font-size: 2.2rem;
+  }
+  
+  .founders-header {
+    margin-bottom: 3rem;
+  }
+  
+  .leadership-details {
+    padding: 2rem;
+  }
+  
+  .leadership-name {
+    font-size: 2rem;
+  }
+  
+  .founders-section {
+    padding: 4rem 0;
+  }
+  
+  .role-badge {
+    padding: 0.6rem 1rem;
+  }
+  
+  .role-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .leadership-content {
+    grid-template-rows: 250px auto;
+  }
+  
+  .leadership-quote {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+  
+  .leadership-name {
+    font-size: 1.8rem;
+  }
+  
+  .leadership-description {
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode styles */
+:root[data-theme="dark"] .founders-section {
+  background: linear-gradient(to bottom, #111827, #0f172a);
+}
+
+:root[data-theme="dark"] .leadership-card {
+  background: #1a1a1a;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="dark"] .leadership-name {
+  color: #e2e8f0;
+}
+
+:root[data-theme="dark"] .leadership-description {
+  color: #cbd5e1;
+}
+
+:root[data-theme="dark"] .leadership-quote {
+  color: #e2e8f0;
+}
+
+:root[data-theme="dark"] .founder-card .leadership-quote {
+  background: rgba(61, 169, 252, 0.1);
+}
+
+:root[data-theme="dark"] .investor-card .leadership-quote {
+  background: rgba(239, 69, 101, 0.1);
+}
+
+:root[data-theme="dark"] .role-badge {
+  background: #2d3748;
+} 

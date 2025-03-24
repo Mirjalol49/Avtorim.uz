@@ -1,0 +1,78 @@
+.language-switcher {
+  position: relative;
+  z-index: 99999;
+}
+
+.language-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.language-arrow {
+  transition: transform 0.3s ease;
+}
+
+.language-arrow.active {
+  transform: rotate(180deg);
+}
+
+/* Since we're using portals, the dropdown will be a direct child of the body */
+.language-dropdown {
+  /* Position is set via JavaScript (fixed position) */
+  background: rgba(9, 64, 103, 0.98);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 120px;
+  z-index: 99999; /* Highest z-index to ensure it's above all elements */
+}
+
+.language-option {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.language-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.language-option.active {
+  background: rgba(61, 169, 252, 0.2);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    margin-right: 8px;
+  }
+  
+  .language-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+} 

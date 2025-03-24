@@ -1,0 +1,99 @@
+:root {
+  /* Light theme (default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --bg-tertiary: #edf0f5;
+  --text-primary: #333333;
+  --text-secondary: #5f6c7b;
+  --text-muted: #7b8998;
+  --accent-primary: #3da9fc;
+  --accent-secondary: #094067;
+  --accent-hover: #2d8ad9;
+  --border-color: #e0e6ed;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-strong: rgba(0, 0, 0, 0.2);
+  --btn-primary-bg: linear-gradient(135deg, #3da9fc 0%, #094067 100%);
+  --btn-primary-text: white;
+  --btn-secondary-bg: white;
+  --btn-secondary-text: #094067;
+  --btn-secondary-border: #094067;
+  --header-bg: rgba(9, 64, 103, 0.95);
+  --header-text: #ffffff;
+  --shop-card-bg: white;
+  --cart-item-bg: white;
+  --form-bg: white;
+  --input-bg: #ffffff;
+  --input-border: #ddd;
+  
+  /* Form validation and status colors */
+  --error-bg: #ffebee;
+  --error-text: #d32f2f;
+  --success-bg: #43a047;
+  --success-text: white;
+  --disabled-bg: #cccccc;
+  --disabled-text: #666666;
+  --accent-primary-hover: #3b8fd9;
+  --accent-secondary-hover: #083b5e;
+  
+  /* Apply smooth transitions to all elements */
+  --transition-speed: 0.3s;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #f5f5f5;
+  --text-secondary: #b8c1cb;
+  --text-muted: #9da7b3;
+  --accent-primary: #2d8ad9;
+  --accent-secondary: #3da9fc;
+  --accent-hover: #1c73c0;
+  --border-color: #383838;
+  --shadow: rgba(0, 0, 0, 0.5);
+  --shadow-strong: rgba(0, 0, 0, 0.7);
+  --btn-primary-bg: linear-gradient(135deg, #2d8ad9 0%, #094067 100%);
+  --btn-primary-text: white;
+  --btn-secondary-bg: #2a2a2a;
+  --btn-secondary-text: #f5f5f5;
+  --btn-secondary-border: #3da9fc;
+  --header-bg: rgba(0, 0, 0, 0.95);
+  --header-text: #f5f5f5;
+  --shop-card-bg: #2a2a2a;
+  --cart-item-bg: #2a2a2a;
+  --form-bg: #1e1e1e;
+  --input-bg: #2a2a2a;
+  --input-border: #444;
+  
+  /* Form validation and status colors for dark theme */
+  --error-bg: #3f1a1a;
+  --error-text: #f48989;
+  --success-bg: #357a38;
+  --success-text: white;
+  --disabled-bg: #444444;
+  --disabled-text: #999999;
+  --accent-primary-hover: #3b8fd9;
+  --accent-secondary-hover: #3da9fc;
+}
+
+/* Apply theme to core elements */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color var(--transition-speed) ease, 
+              color var(--transition-speed) ease;
+}
+
+a {
+  color: var(--accent-primary);
+  transition: color var(--transition-speed) ease;
+}
+
+/* Apply transitions to all elements */
+* {
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+} 

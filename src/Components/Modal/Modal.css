@@ -1,0 +1,245 @@
+/* Modal styles */
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px var(--shadow-strong);
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: modalAppear 0.3s forwards;
+}
+
+@keyframes modalAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal sizes */
+.modal-small {
+  width: 350px;
+}
+
+.modal-medium {
+  width: 500px;
+}
+
+.modal-large {
+  width: 700px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.modal-close-button:hover {
+  color: var(--text-primary);
+}
+
+.modal-close-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-header {
+  padding: 20px 20px 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.modal-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-icon-info {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.modal-icon-success {
+  background-color: var(--success-bg, #43a047);
+  color: var(--success-text, white);
+}
+
+.modal-icon-error {
+  background-color: var(--error-bg, #d32f2f);
+  color: var(--error-text, white);
+}
+
+.modal-icon-confirm {
+  background-color: var(--accent-secondary);
+  color: white;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  flex-grow: 1;
+  padding-right: 24px;
+}
+
+.modal-content {
+  padding: 20px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.modal-message {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.modal-footer {
+  padding: 10px 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-button {
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  border: none;
+  outline: none;
+}
+
+.modal-button:active {
+  transform: scale(0.98);
+}
+
+.modal-button-primary {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.modal-button-primary:hover {
+  background-color: var(--accent-primary-hover, #3b8fd9);
+}
+
+.modal-button-secondary {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.modal-button-secondary:hover {
+  background-color: var(--border-color);
+}
+
+.modal-button-error {
+  background-color: var(--error-bg, #d32f2f);
+  color: white;
+}
+
+.modal-button-error:hover {
+  background-color: #b71c1c;
+}
+
+/* Custom content styling */
+.modal-custom-content {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-small, 
+  .modal-medium, 
+  .modal-large {
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .modal-title {
+    font-size: 1.1rem;
+  }
+  
+  .modal-content {
+    padding: 15px 20px;
+  }
+  
+  .modal-message {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-header {
+    padding: 15px 15px 10px;
+  }
+  
+  .modal-content {
+    padding: 10px 15px;
+  }
+  
+  .modal-footer {
+    padding: 10px 15px 15px;
+  }
+  
+  .modal-title {
+    font-size: 1rem;
+  }
+  
+  .modal-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+} 

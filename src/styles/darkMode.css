@@ -1,0 +1,131 @@
+/* Dark Mode Improvements */
+
+:root[data-theme="dark"] {
+  /* Enhanced background colors - using the team section colors */
+  --bg-primary: #111827 !important;
+  --bg-secondary: #0f172a !important;
+  --bg-tertiary: #1e293b !important;
+  
+  /* Text colors with better contrast */
+  --text-primary: rgba(255, 255, 255, 0.95) !important;
+  --text-secondary: rgba(255, 255, 255, 0.7) !important;
+  
+  /* Form and input styling */
+  --input-bg: #1e293b !important;
+  --input-border: #334155 !important;
+  --form-bg: #1e293b !important;
+  
+  /* Card styling */
+  --card-bg: #1a1a1a !important;
+  --card-border: #2d3748 !important;
+  
+  /* Shadow adjustments */
+  --shadow: rgba(0, 0, 0, 0.3) !important;
+  --shadow-strong: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Apply background to body and main containers */
+:root[data-theme="dark"] body {
+  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+  color: var(--text-primary);
+}
+
+:root[data-theme="dark"] .main-section,
+:root[data-theme="dark"] .container-fluid,
+:root[data-theme="dark"] .shop-container,
+:root[data-theme="dark"] .checkout-container,
+:root[data-theme="dark"] .cart-container {
+  background-color: transparent !important;
+}
+
+/* Fix for card-like elements */
+:root[data-theme="dark"] .why-us-card,
+:root[data-theme="dark"] .service-card,
+:root[data-theme="dark"] .car-part-card,
+:root[data-theme="dark"] .partner-card,
+:root[data-theme="dark"] .team-card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  box-shadow: 0 4px 12px var(--shadow) !important;
+}
+
+/* Fix opacity issues in dark mode */
+:root[data-theme="dark"] .checkout-form-container,
+:root[data-theme="dark"] .order-summary,
+:root[data-theme="dark"] .order-form-container,
+:root[data-theme="dark"] .cart-container,
+:root[data-theme="dark"] .shop-container,
+:root[data-theme="dark"] .contact-form-container {
+  opacity: 1 !important;
+}
+
+/* Text and heading improvements */
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3:not(.video-card-title),
+:root[data-theme="dark"] h4,
+:root[data-theme="dark"] h5,
+:root[data-theme="dark"] h6 {
+  color: var(--text-primary) !important;
+}
+
+/* Apply text color to paragraphs EXCEPT video descriptions and brand names */
+:root[data-theme="dark"] p:not(.video-card-description),
+:root[data-theme="dark"] span:not(.brand-name),
+:root[data-theme="dark"] li {
+  color: var(--text-secondary) !important;
+}
+
+/* Preserve original colors for video descriptions and brand names */
+:root[data-theme="dark"] .video-card-description {
+  color: #5f6c7b !important;
+}
+
+/* Force black color for video titles and brand names in both modes */
+.video-card-title {
+  color: #222222 !important;
+}
+
+.brand-name {
+  color: #222222 !important;
+}
+
+/* Button improvements */
+:root[data-theme="dark"] .back-button,
+:root[data-theme="dark"] .tag-filter-btn:not(.active) {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Enhanced hover effects */
+:root[data-theme="dark"] .why-us-card:hover,
+:root[data-theme="dark"] .service-card:hover,
+:root[data-theme="dark"] .car-part-card:hover,
+:root[data-theme="dark"] .partner-card:hover,
+:root[data-theme="dark"] .team-card:hover {
+  box-shadow: 0 8px 24px var(--shadow-strong) !important;
+  border-color: var(--accent-primary) !important;
+}
+
+/* White checkmarks across the site */
+:root[data-theme="dark"] .service-feature .service-check-icon,
+:root[data-theme="dark"] .why-us-card .card-features li::before {
+  color: var(--accent-primary) !important;
+}
+
+/* Form placeholder color */
+:root[data-theme="dark"] input::placeholder,
+:root[data-theme="dark"] textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Adjust header for dark mode */
+:root[data-theme="dark"] .header {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+:root[data-theme="dark"] .header.scrolled {
+  background-color: rgba(17, 24, 39, 0.95) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+} 

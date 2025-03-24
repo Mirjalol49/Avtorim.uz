@@ -1,0 +1,48 @@
+{
+  "name": "Avtorim - O'zbekistondagi Professional Avtomobil Ta'mirlash Markazi",
+  "short_name": "Avtorim",
+  "description": "Professional avtomobil ta'mirlash va texnik xizmat ko'rsatish markazi. 24/7 mijozlarni qo'llab-quvvatlash. Barcha turdagi mashinalar uchun xizmatlar.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#094067",
+  "categories": ["business", "auto", "services"],
+  "lang": "uz",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/src/assets/Images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/src/assets/Images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/src/assets/Images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/src/assets/Images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/src/assets/Images/screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Avtorim bosh sahifasi"
+    }
+  ]
+} 

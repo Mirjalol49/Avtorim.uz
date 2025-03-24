@@ -1,0 +1,167 @@
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* Button sizes */
+.custom-button.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.custom-button.medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.custom-button.large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Button variants */
+.custom-button.primary {
+  background: linear-gradient(135deg, #3da9fc, #2196f3);
+  box-shadow: 0 4px 12px rgba(61, 169, 252, 0.2);
+}
+
+.custom-button.primary:hover, 
+.custom-button.primary:focus {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(61, 169, 252, 0.3);
+}
+
+.custom-button.primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(61, 169, 252, 0.3);
+}
+
+.custom-button.secondary {
+  background: transparent;
+  border: 2px solid #3da9fc;
+  color: #3da9fc;
+}
+
+.custom-button.secondary:hover, 
+.custom-button.secondary:focus {
+  background: rgba(61, 169, 252, 0.1);
+  transform: translateY(-2px);
+}
+
+.custom-button.secondary:active {
+  transform: translateY(0);
+}
+
+.custom-button.accent {
+  background: linear-gradient(135deg, #ef4565, #d81b60);
+  box-shadow: 0 4px 12px rgba(239, 69, 101, 0.2);
+}
+
+.custom-button.accent:hover, 
+.custom-button.accent:focus {
+  background: linear-gradient(135deg, #d81b60, #c2185b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(239, 69, 101, 0.3);
+}
+
+.custom-button.accent:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(239, 69, 101, 0.3);
+}
+
+.custom-button.ghost {
+  background: transparent;
+  color: #3da9fc;
+}
+
+.custom-button.ghost:hover, 
+.custom-button.ghost:focus {
+  background: rgba(61, 169, 252, 0.1);
+}
+
+/* Full width button */
+.custom-button.full-width {
+  width: 100%;
+}
+
+/* Button with icon */
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-icon.left {
+  margin-right: 0.25rem;
+}
+
+.button-icon.right {
+  margin-left: 0.25rem;
+}
+
+/* Ripple effect */
+.custom-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.custom-button:active::after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+/* Disabled button */
+.custom-button[disabled],
+.custom-button[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Button text */
+.button-text {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .custom-button.small {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+  }
+  
+  .custom-button.medium {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .custom-button.large {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

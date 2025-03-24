@@ -1,0 +1,105 @@
+.video-section {
+  padding: 6rem 0;
+ 
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.video-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.video-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #094067 0%, #3da9fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.video-subtitle {
+  font-size: 1.2rem;
+  color: #5f6c7b;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2.5rem;
+}
+
+.video-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(9, 64, 103, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1.5px solid #e2e8f0;
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(9, 64, 103, 0.2);
+  border-color: #3da9fc;
+}
+
+.video-frame {
+  position: relative;
+  padding-top: 65%;
+  background: #000;
+}
+
+.video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-content {
+  padding: 1.8rem;
+  border-top: 1px solid rgba(9, 64, 103, 0.08);
+}
+
+.video-card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #094067;
+  margin-bottom: 0.8rem;
+}
+
+.video-card-description {
+  color: #5f6c7b;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    padding: 4rem 0;
+  }
+  
+  .video-title {
+    font-size: 2.5rem;
+  }
+  
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

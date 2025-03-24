@@ -1,0 +1,18 @@
+.projects-section {
+
+    color: #fff;
+}
+
+.projects-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .projects-title {
+        font-size: 2rem;
+    }
+}

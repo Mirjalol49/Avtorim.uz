@@ -1,0 +1,225 @@
+.faq-section {
+  padding: 6rem 0;
+ 
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-subtitle {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, rgba(61, 169, 252, 0.1), rgba(9, 64, 103, 0.1));
+  color: #094067;
+  border-radius: 100px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 4px rgba(9, 64, 103, 0.05);
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #094067 0%, #3da9fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #094067, rgba(9, 64, 103, 0.3));
+  border-radius: 2px;
+}
+
+.section-description {
+  color: #5f6c7b;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  cursor: pointer;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(9, 64, 103, 0.03);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  border-color: #3da9fc;
+  box-shadow: 0 8px 30px rgba(9, 64, 103, 0.08);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+.faq-question h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #094067;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.faq-icon {
+  font-size: 1.25rem;
+  color: #094067;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.faq-item:hover .faq-icon {
+  background: #3da9fc;
+  color: white;
+  border-color: #3da9fc;
+}
+
+.faq-item.active {
+  background: #ffffff;
+  border-color: #3da9fc;
+  box-shadow: 0 8px 30px rgba(9, 64, 103, 0.08);
+}
+
+.faq-item.active .faq-icon {
+  background: #094067;
+  color: white;
+  border-color: #094067;
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0;
+}
+
+.faq-answer p {
+  color: #5f6c7b;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  padding: 1.5rem 0.5rem 0.5rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 0.5rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.faq-cta {
+  text-align: center;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-cta p {
+  margin-bottom: 1.5rem;
+  color: #5f6c7b;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .faq-grid {
+    padding: 0 1rem;
+  }
+
+  .faq-question h3 {
+    font-size: 1.1rem;
+  }
+
+  .faq-answer p {
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode overrides for FAQ section */
+:root[data-theme="dark"] .faq-question h3 {
+  color: #222222 !important; /* Dark text in dark mode */
+}
+
+:root[data-theme="dark"] .faq-answer p {
+  color: #222222 !important; /* Dark text in dark mode */
+}
+
+:root[data-theme="dark"] .faq-item {
+  background-color: #f0f0f0 !important; /* Light background in dark mode */
+  border: 1px solid #dddddd !important;
+}
+
+:root[data-theme="dark"] .faq-item.active {
+  background-color: #ffffff !important; /* White background for active items */
+  border-color: #3da9fc !important;
+}
+
+:root[data-theme="dark"] .faq-icon {
+  color: #333333 !important;
+}
+
+:root[data-theme="dark"] .section-subtitle {
+  color: #ffffff !important;
+  background: rgba(61, 169, 252, 0.3) !important;
+}
+
+/* Make sure section title is visible in dark mode but keep gradient */
+:root[data-theme="dark"] .section-title {
+  -webkit-text-fill-color: white !important;
+  background: none !important;
+  color: white !important;
+} 
