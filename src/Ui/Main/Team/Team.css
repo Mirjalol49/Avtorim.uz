@@ -1,7 +1,7 @@
 .team-section {
   position: relative;
   overflow-x: hidden;
-  padding: 6rem 0;
+  padding: 7rem 0;
   background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
   contain: layout;
 }
