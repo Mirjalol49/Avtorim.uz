@@ -42,16 +42,22 @@ const Founders = () => {
       }
     },
     investor: {
-      name: "Ali Almarshoud",
+      name: "Ali Ibrahim Al-Marshoud",
       position: {
         en: "Lead Investor",
         ru: "Ведущий инвестор",
         uz: "Yetakchi sarmoyador"
       },
       description: {
-        en: "Ali brings financial expertise and strategic vision to Avtorim. His investment has enabled us to expand our services and inventory, ensuring we can meet all customer needs with the highest quality Chinese auto parts.",
-        ru: "Али привносит финансовую экспертизу и стратегическое видение в Avtorim. Его инвестиции позволили нам расширить наши услуги и ассортимент, гарантируя, что мы можем удовлетворить все потребности клиентов высококачественными китайскими автозапчастями.",
-        uz: "Ali Avtorim'ga moliyaviy tajriba va strategik ko'rinish olib keladi. Uning investitsiyasi bizning xizmatlarimiz va inventarimizni kengaytirishga imkon berdi, bu bizga mijozlarning barcha ehtiyojlarini yuqori sifatli Xitoy avto qismlari bilan qondira olishimizni ta'minlaydi."
+        en: `A Kuwaiti investor who Obtained a mechanical engineering degree in 2006 from Philadelphia University, Jordan.
+And a company manager
+"ALI ALMARSHOUD AUTO PARTS" MCHJ`,
+        ru: `Кувейтский инвестор, получивший степень инженера-механиста в 2006 году в Филадельфийском университете, Иордания.
+А менеджер компании
+ООО "ALI ALMARSHOUD AUTO PARTS"`,
+        uz: `Quvaytlik investor, 2006-yilda Iordaniyaning Filadelfiya universitetida muhandislik darajasini olgan.
+Kompaniya boshqaruvchisi
+"ALI ALMARSHOUD AUTO PARTS" MCHJ`
       },
       quote: {
         en: "Investing in quality and expertise creates value for our customers and community.",
