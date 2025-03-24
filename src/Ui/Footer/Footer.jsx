@@ -106,7 +106,7 @@ const Footer = () => {
               <ul className="contact-info">
                 <li className="contact-item">
                   <i className="fas fa-map-marker-alt contact-icon"></i>
-                  <span>Toshkent sh. Sergeli t, Index Bozor H8 Blok</span>
+                  <span>Toshkent sh. Sergeli. Index Bozor H8 Blok</span>
                 </li>
                 <li className="contact-item">
                   <i className="fas fa-phone contact-icon"></i>

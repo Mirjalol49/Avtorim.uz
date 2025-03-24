@@ -48,9 +48,9 @@ const FAQ = () => {
           uz: "Qanday to'lov usullari mavjud?"
         },
         answer: {
-          en: "You can pay with cash, bank card, or bank transfer. We also offer installment payment options.",
-          ru: "Вы можете оплатить наличными, банковской картой или банковским переводом. Мы также предлагаем возможность оплаты в рассрочку.",
-          uz: "Naqd pul, bank kartasi va pul o'tkazish orqali to'lovni amalga oshirishingiz mumkin. Shuningdek, bo'lib to'lash imkoniyati ham mavjud."
+          en: "You can pay with cash, bank card, or bank transfer.",
+          ru: "Вы можете оплатить наличными, банковской картой или банковским переводом.",
+          uz: "Naqd pul, bank kartasi va pul o'tkazish orqali to'lovni amalga oshirishingiz mumkin."
         }
       },
       {
