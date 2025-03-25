@@ -32,7 +32,7 @@ const Contact = () => {
     addressValue: {
       en: "Tashkent, Sergeli district, Index Market H8 Block",
       ru: "Ташкент, Сергелийский р-н, Индекс Базар H8 Блок",
-      uz: "Toshkent sh. Sergeli t, Index Bozor H8 Blok"
+      uz: "Toshkent sh. Sergeli, Index Bozor H8 Blok"
     },
     phone: {
       en: "Phone",

@@ -3,6 +3,7 @@ import './Team.css';
 import { useLanguage } from '../../../hooks/useLanguage';
 
 import team1 from '../../../assets/Images/emp1.png';
+
 import team2 from '../../../assets/Images/emp2.png';
 import team3 from '../../../assets/Images/emp3.png';
 import team4 from '../../../assets/Images/emp4.png';
@@ -10,7 +11,8 @@ import team5 from '../../../assets/Images/emp5.png';
 import team6 from '../../../assets/Images/emp6.png';
 import team7 from '../../../assets/Images/emp7.png';
 import team8 from '../../../assets/Images/emp8.png';
-
+import team9 from '../../../assets/Images/emp9.png';
+import team10 from '../../../assets/Images/emp10.png';
 
 const Team = () => {
   const { language } = useLanguage();
@@ -45,6 +47,10 @@ const Team = () => {
           uz: "Usta-texnik"
         }
       },
+
+  
+
+
       {
         name: "Mirzaolim G'oziyev",
        
@@ -131,7 +137,35 @@ const Team = () => {
           ru: "Интернет-специалист",
           uz: "Internet mutaxasisi"
         }
-      }
+      },
+
+      {
+        name: "Umidjon Ma'murov",
+        position: {
+          en: "Dent Repair",
+          ru: "Мастер по ремонту кузова ",
+          uz: "Myatinachi"
+        },
+        specialty: {
+          en: "Dent Repair",
+          ru: "Мастер по ремонту кузова ",
+          uz: "Myatinachi"
+        }
+      },
+
+      {
+        name: "Shermuxammad Ergashev",
+        position: {
+          en: "Dent Repair",
+          ru: "Мастер по ремонту кузова ",
+          uz: "Myatinachi"
+        },
+        specialty: {
+          en: "Saler",
+          ru: "Продавец",
+          uz: "Sotuvchi"
+        }
+      },
     ]
   };
 
@@ -151,7 +185,7 @@ const Team = () => {
             <div key={index} className="team-card">
               <div className="member-image-wrapper">
                 <img 
-                  src={[team1, team2, team3, team4, team5, team6, team7, team8][index]}
+                  src={[team1, team2, team3, team4, team5, team6, team7, team8, team9, team10][index]}
                   alt={member.name} 
                   className="member-image"
                 />

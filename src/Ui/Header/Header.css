@@ -178,6 +178,7 @@
  }
  /* Responsive Adjustments */
  @media (max-width: 480px) {
+
   .logo-image {
   width: 140px;
   }

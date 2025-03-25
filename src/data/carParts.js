@@ -1,16 +1,26 @@
-
-
+import product1 from '../assets/Images/product1.jpg'
+import product2 from '../assets/Images/product2.jpg'
+import product3 from '../assets/Images/product3.jpg'
+import product4 from '../assets/Images/product4.jpg'
+import product5 from '../assets/Images/product5.jpg'
+import product6 from '../assets/Images/product6.jpg'
+import product7 from '../assets/Images/product7.jpg'
+import product8 from '../assets/Images/product8.jpg'
+import product9 from '../assets/Images/product9.jpg'
+import product10 from '../assets/Images/product10.jpg'
+import product11 from '../assets/Images/product11.jpg'
+import product12 from '../assets/Images/product12.jpg'
 
 const carParts = [
   {
-    id: 1,
-    image: 'https://frankfurt.apollo.olxcdn.com/v1/files/8v4sh9kda34o3-UZ/image;s=1000x700',
+    id: 1, 
+    image: product1,
     name: {
-      en: 'Brake Pads',
-      ru: 'Тормозные колодки',
-      uz: 'Jetaur T2 old kapot'
+      en: 'Jetour T2 steering wheel',
+      ru: 'Jetour T2 рул',
+      uz: 'Jetaur T2 rul'
     },
-    price: 1000,
+    price: 89,
     brand: {
       en: 'Jetour',
       ru: 'Jetour',
@@ -21,13 +31,13 @@ const carParts = [
 
   {
     id: 2,
-    image: 'https://frankfurt.apollo.olxcdn.com/v1/files/strg9ctvrnjp3-UZ/image;s=1000x700',
+    image: product2,
     name: {
-      en: 'X70 plus Bakavina right left celiac',
-      ru: 'X70 плюс Бакавина правый левый целий',
-      uz: 'X70 plus Bakavina o’ng chap seliy'
+      en: 'Jetour exterior door handle',
+      ru: 'Jetour наружная дверная ручка',
+      uz: 'Jetour eshik tutqich'
     },
-    price: 1000,
+    price: 45,
     brand: {
       en: 'Jetour',
       ru: 'Jetour',
@@ -38,13 +48,13 @@ const carParts = [
   
   {
     id: 3,
-    image: 'https://frankfurt.apollo.olxcdn.com/v1/files/qnttqy9nlf2r2-UZ/image;s=1000x700',
+    image: product3,
     name: {
-      en: 'To all Jetour Pen models',
-      ru: 'Jetour Ручка для всех моделей',
-      uz: 'Jetour Ruchka barcha madelariga'
+      en: 'Jetour front bumper with a grille ',
+      ru: 'Jetour аблисофка',
+      uz: 'Jetour ablisofka'
     },
-    price: 50,
+    price: 170,
     brand: {
       en: 'Jetour',
       ru: 'Jetour',
@@ -55,11 +65,11 @@ const carParts = [
 
   {
     id: 4,
-    image: 'https://frankfurt.apollo.olxcdn.com/v1/files/pw4tw0khlhgp2-UZ/image;s=1000x700',
+    image: product4,
     name: {
-      en: 'JETOUR X70 Restanlin Rolled River',
-      ru: 'JETOUR X70 Рестанлин Роликовая река',
-      uz: 'JETOUR X70 restanlin Rolavoy reka'
+      en: 'Jetour front bumper with a grille ',
+      ru: 'Jetour аблисофка',
+      uz: 'Jetour ablisofka'
     },
     price: 300,
     brand: {
@@ -73,11 +83,11 @@ const carParts = [
 
   {
     id: 5,
-    image: 'https://frankfurt.apollo.olxcdn.com/v1/files/jt1dhkvn09jt-UZ/image;s=1000x700',
+    image: product5,
     name: {
-      en: 'JETOUR DASHING BUFFER is white',
-      ru: 'JETOUR DASHING BUMPHER белый',
-      uz: 'JETOUR DASHING BAMFER oq rangda'
+      en: 'Jetour back light',
+      ru: 'Jetour задняя фара',
+      uz: 'Jetour orqa fara'
     },
     price: 300,
     brand: {
@@ -90,28 +100,28 @@ const carParts = [
   
   {
     id: 6,
-    image: 'https://frankfurt.apollo.olxcdn.com/v1/files/z6yyd237slkg1-UZ/image;s=1000x700',
+    image: product6,
     name: {
-      en: 'Bumfer Dashing Jetour Front Black',
-      ru: 'Бамфер Дашинг Джетур перед черным',
-      uz: 'Bamfer Dashing Jetour oldi qora'
+      en: 'Lixiang front light',
+      ru: 'Lixiang передняя фара',
+      uz: 'Lixiang oldi fara'
     },
-    price: 300,
+    price: 100,
     brand: {
-      en: 'Jetour',
-      ru: 'Jetour',
-      uz: 'Jetour'
+      en: 'Li',
+      ru: 'Li',
+      uz: 'Li'
      
     }
   },
 
   {
     id: 7,
-    image: 'https://frankfurt.apollo.olxcdn.com/v1/files/pgw16u2jt9ht3-UZ/image;s=1000x700',
+    image: product7,
     name: {
-      en: 'Jetour oldi amartizator',
-      ru: 'Jetour oldi amartizator',
-      uz: 'Jetour oldi amartizator'
+      en: 'Jetour back bumper',
+      ru: 'Jetour задний бампер',
+      uz: 'Jetour orqa bamfer'
     },
     price: 110,
     brand: {
@@ -124,13 +134,31 @@ const carParts = [
 
   {
     id: 8,
-    image: 'https://frankfurt.apollo.olxcdn.com/v1/files/z5l86rqwgy1a3-UZ/image;s=1000x700',
+    image: product8,
     name: {
-      en: 'JETOUR X90 plus ARKA ong chap bori',
-      ru: 'JETOUR X90 plus ARKA ong chap bori',
-      uz: 'JETOUR X90 plus ARKA ong chap bori'
+      en: 'BYD Shock Absorber',
+      ru: 'BYD Амортизатор',
+      uz: 'BYD amartizator'
     },
-    price: 34,
+    price: 200,
+    brand: {
+      en: 'BYD',
+      ru: 'BYD',
+      uz: 'BYD'
+
+    }
+  },
+
+
+  {
+    id: 9,
+    image: product9,
+    name: {
+      en: 'Jetour Dashing Front Bumper',
+      ru: 'Jetour Dashing Передний бампер',
+      uz: 'Jetour Dashing oldi banferi'
+    },
+    price: 300,
     brand: {
       en: 'Jetour',
       ru: 'Jetour',
@@ -139,16 +167,49 @@ const carParts = [
     }
   },
 
-
   {
-    id: 9,
-    image: 'https://frankfurt.apollo.olxcdn.com/v1/files/ixr9a4roql3v1-UZ/image;s=1000x700',
+    id: 10,
+    image: product10,
     name: {
-      en: 'Jetour x70 restanlin Bakavoy oq',
-      ru: 'Jetour x70 restanlin Bakavoy oq',
-      uz: 'Jetour x70 restanlin Bakavoy oq'
+      en: 'Jetour Dashing Front Bumper',
+      ru: 'Jetour Dashing Передний бампер',
+      uz: 'Jetour Dashing oldi banferi'
     },
     price: 250,
+    brand: {
+      en: 'Jetour',
+      ru: 'Jetour',
+      uz: 'Jetour'
+
+    }
+  },
+
+  {
+    id: 11,
+    image: product11,
+    name: {
+      en: 'Fengon 508S Side Mirror ',
+      ru: 'Fengon 508S Боковое зеркало',
+      uz: `Fengon 508S yon ko'zgu`
+    },
+    price: 350,
+    brand: {
+      en: 'Fengon',
+      ru: 'Fengon',
+      uz: 'Fengon'
+
+    }
+  },
+
+  {
+    id: 12,
+    image: product12,
+    name: {
+      en: 'Jetour Fuel Pump',
+      ru: 'Jetour Топливный насос',
+      uz: 'Jetour Benzin nasos'
+    },
+    price: 100,
     brand: {
       en: 'Jetour',
       ru: 'Jetour',

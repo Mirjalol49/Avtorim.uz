@@ -122,9 +122,9 @@ const Services = () => {
     },
     vacuumSystems: {
       title: {
-        en: 'Vacuum Systems',
-        ru: 'Вакуумные Системы',
-        uz: 'Vakum Tizimlari'
+        en: 'Paintless Dent Repair',
+        ru: 'Мастер по ремонту кузова',
+        uz: 'Kuzov qismlarini  ta’mirlash'
       },
       description: {
         en: 'Professional vacuum system repair services',
@@ -133,9 +133,9 @@ const Services = () => {
       },
       services: [
         {
-          en: 'Suspension Repair',
-          ru: 'Ремонт подвески',
-          uz: 'Turtgan joylarini to\'g\'irlash'
+          en: 'Smoothing deep and scratched areas',
+          ru: 'Выравнивание углублений и царапин',
+          uz: 'Chuqur va tirnalgan joylarni tekislash'
         },
         {
           en: 'Paint Work',
@@ -143,9 +143,9 @@ const Services = () => {
           uz: 'Bo\'yash ishlari'
         },
         {
-          en: 'Panel Replacement',
-          ru: 'Замена панелей',
-          uz: 'Panel Almashtirish'
+          en: 'Anti-corrosion treatment',
+          ru: 'Антикоррозионная обработка',
+          uz: 'Korroziyaga qarshi ishlov berish'
         }
       ]
     }

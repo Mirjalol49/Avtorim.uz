@@ -236,7 +236,7 @@
 /* Mobile phones */
 @media (max-width: 576px) {
   .hero {
-    padding: 4rem 1rem;
+    padding: 6rem 1rem;
     min-height: auto;
   }
 
