@@ -1,7 +1,7 @@
 import React from 'react';
 import './Founders.css';
 import { useLanguage } from '../../../hooks/useLanguage';
-import ceo from '../../../assets/Images/ceo.png';
+import ceo from '../../../assets/Images/ceo.jpg';
 import emp2 from '../../../assets/Images/investor.png';
 
 const Founders = () => {
@@ -31,9 +31,17 @@ const Founders = () => {
         uz: "Asoschisi va Expert"
       },
       description: {
-        en: "With over 15 years of experience in the automotive industry, Jahongir leads our company with vision and expertise. He founded Avtorim with a mission to provide quality Chinese auto parts and exceptional service.",
+        en: "",
         ru: "Имея более 15 лет опыта в автомобильной индустрии, Джахонгир руководит нашей компанией с видением и экспертизой. Он основал Avtorim с миссией предоставлять качественные китайские автозапчасти и исключительный сервис.",
-        uz: "Avtomobil sohasida 15 yildan ortiq tajribaga ega Saidolim kompaniyamizni ko'rinish va tajriba bilan boshqaradi. U sifatli Xitoy avto qismlarini va ajoyib xizmat ko'rsatishni ta'minlash maqsadida Avtorim'ni tashkil etdi."
+        uz: "Sayidolim – 15 yildan ortiq avtomobilsozlik tajribasiga ega mutaxassis.\n\n" +
+      "U xalqaro tajribaga (Rossiya, Koreya) ega bo'lib, avtomobil salon dizayni bo'yicha sertifikatga ega.\n" +
+      "Xitoy avtomobil ehtiyot qismlarini yetkazib berish va mijozlarga yuqori sifatli xizmat ko'rsatish maqsadida AVTORIM kompaniyasini asos solgan.\n" +
+      "Hozirda Xitoyda faoliyat yuritmoqda.\n\n" +
+      "• Xitoy avtomobil qismlariga ixtisoslashgan\n" +
+      "• Xalqaro tajriba (Rossiya, Koreya)\n" +
+      "• Avtomobil salon dizayni bo'yicha sertifikat\n" +
+      "• Hozirda Xitoyda ishlaydi\n\n" +
+      "Bog'lanish: @Sayidoliim"
       },
       quote: {
         en: "Quality parts and exceptional service are at the heart of everything we do.",
