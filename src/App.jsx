@@ -6,6 +6,8 @@ import Footer from './Ui/Footer/Footer';
 import Shop from './Ui/Shop/Shop';
 import Cart from './Ui/Shop/Cart';
 import Checkout from './Ui/Shop/Checkout';
+import News from './Ui/News/News';
+import NewsDetail from './Ui/News/NewsDetail';
 import { LanguageProvider } from './hooks/useLanguage.jsx';
 import { ShoppingCartProvider } from './hooks/useShoppingCart.jsx';
 import { ThemeProvider } from './hooks/useTheme.jsx';
@@ -93,6 +95,22 @@ function App() {
         <>
           <Header />
           <Checkout />
+          <Footer />
+        </>
+      } />
+      
+      {/* News routes */}
+      <Route path="/news" element={
+        <>
+          <Header />
+          <News />
+          <Footer />
+        </>
+      } />
+      <Route path="/news/:id" element={
+        <>
+          <Header />
+          <NewsDetail />
           <Footer />
         </>
       } />

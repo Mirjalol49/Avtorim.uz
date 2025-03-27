@@ -65,6 +65,12 @@ const Header = () => {
     uz: "Do'kon"
   };
 
+  const newsMenuText = {
+    en: "News",
+    ru: "Новости",
+    uz: "Yangiliklar"
+  };
+
   const cartMenuText = {
     en: "Cart",
     ru: "Корзина",
@@ -115,6 +121,22 @@ const Header = () => {
               
               <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 1 : 1}}>
                 <Link 
+                  className={`nav-item_link ${location.pathname.startsWith('/news') ? 'active' : ''}`} 
+                  to="/news"
+                  onClick={closeMenu}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="menu-icon">
+                    <path d="M3.99902 16V7C3.99902 5.89543 4.89445 5 5.99902 5H18.999C20.1036 5 20.999 5.89543 20.999 7V16C20.999 17.1046 20.1036 18 18.999 18H5.99902C4.89445 18 3.99902 17.1046 3.99902 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M7 8H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M7 11H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M7 14H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  {newsMenuText[language]}
+                </Link>
+              </li>
+              
+              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 2 : 2}}>
+                <Link 
                   className={`nav-item_link ${location.pathname === '/cart' ? 'active' : ''}`} 
                   to="/cart"
                   onClick={closeMenu}
@@ -125,15 +147,15 @@ const Header = () => {
                 </Link>
               </li>
               
-              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 2 : 2}}>
+              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 3 : 3}}>
                 <ThemeToggle />
               </li>
               
-              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 3 : 3}}>
+              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 4 : 4}}>
                 <LanguageSwitcher />
               </li>
               
-              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 4 : 4}}>
+              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 5 : 5}}>
                 <Btn 
                   text={getText("header.freeConsultation", language, "Consultation")} 
                   onClick={(e) => scrollToSection(e, "#contact")} 

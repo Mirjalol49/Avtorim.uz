@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import translations from '../utils/translations';
 
 // Create a context for language management
 export const LanguageContext = createContext();
@@ -31,7 +32,7 @@ export const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, translations }}>
       {children}
     </LanguageContext.Provider>
   );

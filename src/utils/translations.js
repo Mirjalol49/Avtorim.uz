@@ -97,9 +97,50 @@ const translations = {
     }
   },
   
-  // Main page translations can be added as needed
+  // Main page translations
   main: {
     // Add main page translations here
+  },
+  
+  // News section translations
+  news: {
+    title: {
+      uz: "Yangiliklar",
+      en: "News",
+      ru: "Новости"
+    },
+    subtitle: {
+      uz: "Biz haqimizdagi so'nggi yangiliklarni kuzatib boring",
+      en: "Stay updated with our latest news and announcements",
+      ru: "Следите за нашими последними новостями и объявлениями"
+    }
+  },
+  
+  // Loading and common translations
+  loading: {
+    en: "Loading content...",
+    ru: "Загрузка содержимого...",
+    uz: "Kontent yuklanmoqda..."
+  },
+  readMore: {
+    en: "Read more",
+    ru: "Читать далее",
+    uz: "Batafsil"
+  },
+  noNewsAvailable: {
+    en: "No news available at the moment",
+    ru: "На данный момент новостей нет",
+    uz: "Hozirda yangiliklar mavjud emas"
+  },
+  newsNotFound: {
+    en: "News article not found",
+    ru: "Новость не найдена",
+    uz: "Yangilik topilmadi"
+  },
+  backToNews: {
+    en: "Back to News",
+    ru: "Назад к новостям",
+    uz: "Yangiliklarrga qaytish"
   },
   
   // Language switcher

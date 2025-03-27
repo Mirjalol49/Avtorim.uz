@@ -107,7 +107,38 @@ Kompaniya boshqaruvchisi
               </div>
               <div className="leadership-details">
                 <h3 className="leadership-name">{translations.founder.name}</h3>
-                <p className="leadership-description">{translations.founder.description[language]}</p>
+                <div 
+                  className="leadership-description"
+                  dangerouslySetInnerHTML={{
+                    __html: language === 'uz' ? `
+                      <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">Sayidolim – 15 yildan ortiq avtomobilsozlik tajribasiga ega mutaxassis.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">U xalqaro tajribaga (Rossiya, Koreya) ega bo'lib, avtomobil salon dizayni bo'yicha sertifikatga ega.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Xitoy avtomobil ehtiyot qismlarini yetkazib berish va mijozlarga yuqori sifatli xizmat ko'rsatish maqsadida AVTORIM kompaniyasini asos solgan.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.6;">Hozirda Xitoyda faoliyat yuritmoqda.</p>
+                      
+                      <p style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #3366cc;">Asosiy yo'nalishlari:</p>
+                      
+                      <div style="margin-left: 15px; margin-bottom: 25px;">
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🚗 Xitoy avtomobil qismlariga ixtisoslashgan</p>
+                        
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🌍 Xalqaro tajriba (Rossiya, Koreya)</p>
+                        
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🏆 Avtomobil salon dizayni bo'yicha sertifikat</p>
+                        
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🇨🇳 Hozirda Xitoyda ishlaydi</p>
+                      </div>
+                      
+                      <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Bog'lanish: <a href="https://www.instagram.com/sayidoliim/" target="_blank" style="color: #3366cc; font-weight: 600; text-decoration: none;">@Sayidoliim</a></p>
+                    ` : language === 'ru' ? `
+                      <p style="font-size: 1.05rem; line-height: 1.6;">Имея более 15 лет опыта в автомобильной индустрии, Джахонгир руководит нашей компанией с видением и экспертизой. Он основал Avtorim с миссией предоставлять качественные китайские автозапчасти и исключительный сервис.</p>
+                    ` : `
+                      <p style="font-size: 1.05rem; line-height: 1.6;">With over 15 years of experience in the automotive industry, Saidolim leads our company with vision and expertise. He founded Avtorim with a mission to provide quality Chinese auto parts and exceptional service.</p>
+                    `
+                  }}
+                />
                 <div className="leadership-quote">
                   <svg className="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <path fill="currentColor" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
@@ -138,7 +169,30 @@ Kompaniya boshqaruvchisi
               </div>
               <div className="leadership-details">
                 <h3 className="leadership-name">{translations.investor.name}</h3>
-                <p className="leadership-description">{translations.investor.description[language]}</p>
+                <div 
+                  className="leadership-description"
+                  dangerouslySetInnerHTML={{
+                    __html: language === 'uz' ? `
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Quvaytlik investor, 2006-yilda Iordaniyaning Filadelfiya universitetida muhandislik darajasini olgan.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Kompaniya boshqaruvchisi</p>
+                      
+                      <p style="font-size: 1.1rem; font-weight: 600; color: #3366cc; margin-bottom: 15px;">"ALI ALMARSHOUD AUTO PARTS" MCHJ</p>
+                    ` : language === 'ru' ? `
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Кувейтский инвестор, получивший степень инженера-механиста в 2006 году в Филадельфийском университете, Иордания.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">А менеджер компании</p>
+                      
+                      <p style="font-size: 1.1rem; font-weight: 600; color: #3366cc; margin-bottom: 15px;">ООО "ALI ALMARSHOUD AUTO PARTS"</p>
+                    ` : `
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">A Kuwaiti investor who Obtained a mechanical engineering degree in 2006 from Philadelphia University, Jordan.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">And a company manager</p>
+                      
+                      <p style="font-size: 1.1rem; font-weight: 600; color: #3366cc; margin-bottom: 15px;">"ALI ALMARSHOUD AUTO PARTS" MCHJ</p>
+                    `
+                  }}
+                />
                 <div className="leadership-quote">
                   <svg className="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <path fill="currentColor" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
