@@ -765,12 +765,19 @@
   outline: none;
 }
 
-/* Make focus states visible for accessibility */
+/* Remove the green outline for focus states and replace with something more subtle */
 a:focus, 
 button:focus,
-.read-more-link:focus {
-  outline: 2px solid var(--primary-color, #3366cc);
-  outline-offset: 2px;
+.read-more-link:focus,
+.telegram-share-button:focus,
+.btn-back:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(51, 102, 204, 0.4);
+}
+
+/* Override default focus styles */
+* {
+  outline-color: transparent;
 }
 
 /* High contrast mode */

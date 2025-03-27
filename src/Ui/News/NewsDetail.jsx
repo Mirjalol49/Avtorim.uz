@@ -158,9 +158,13 @@ const NewsDetail = () => {
 
   // Function to handle Telegram sharing
   const shareOnTelegram = (newsItem) => {
-    const url = window.location.href;
+    // Create an absolute URL instead of relative URL
+    const baseUrl = window.location.origin;
+    const relativeUrl = window.location.pathname;
+    const absoluteUrl = baseUrl + relativeUrl;
+    
     const title = newsItem.title[language];
-    const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+    const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(absoluteUrl)}&text=${encodeURIComponent(title)}`;
     window.open(shareUrl, '_blank', 'width=600,height=400');
   };
 
