@@ -55,7 +55,7 @@ const Header = () => {
   const homeMenuItems = [
     { href: "#services", textKey: "header.services" },
     { href: "#whyus", textKey: "header.whyUs" },
-    { href: "#team", textKey: "header.team" },
+    // { href: "#team", textKey: "header.team" },
     { href: "#contact", textKey: "header.contact" }
   ];
 
