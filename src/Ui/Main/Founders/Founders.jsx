@@ -31,17 +31,9 @@ const Founders = () => {
         uz: "Asoschisi va Expert"
       },
       description: {
-        en: "",
-        ru: "Имея более 15 лет опыта в автомобильной индустрии, Джахонгир руководит нашей компанией с видением и экспертизой. Он основал Avtorim с миссией предоставлять качественные китайские автозапчасти и исключительный сервис.",
-        uz: "Sayidolim – 15 yildan ortiq avtomobilsozlik tajribasiga ega mutaxassis.\n\n" +
-      "U xalqaro tajribaga (Rossiya, Koreya) ega bo'lib, avtomobil salon dizayni bo'yicha sertifikatga ega.\n" +
-      "Xitoy avtomobil ehtiyot qismlarini yetkazib berish va mijozlarga yuqori sifatli xizmat ko'rsatish maqsadida AVTORIM kompaniyasini asos solgan.\n" +
-      "Hozirda Xitoyda faoliyat yuritmoqda.\n\n" +
-      "• Xitoy avtomobil qismlariga ixtisoslashgan\n" +
-      "• Xalqaro tajriba (Rossiya, Koreya)\n" +
-      "• Avtomobil salon dizayni bo'yicha sertifikat\n" +
-      "• Hozirda Xitoyda ishlaydi\n\n" +
-      "Bog'lanish: @Sayidoliim"
+        en: "Having more than 15 years of experience in the automotive industry, Saidolim leads our company with vision and expertise. He founded Avtorim with a mission to provide quality Chinese auto parts and exceptional service.",
+        ru: "Имея более 15 лет опыта в автомобильной индустрии, Саидолим руководит нашей компанией с видением и экспертизой. Он основал Avtorim с миссией предоставлять качественные китайские автозапчасти и исключительный сервис.",
+        uz: `Avtomobil sanoatida 15 yildan ortiq tajribaga ega Saidolim kompaniyamizni uzoqni ko‘ra oladigan va tajribali rahbar sifatida boshqarib kelmoqda. U sifatli Xitoy avtomobil ehtiyot qismlari va ajoyib xizmat ko‘rsatish missiyasi bilan Avtorim kompaniyasiga asos solgan.`
       },
       quote: {
         en: "Quality parts and exceptional service are at the heart of everything we do.",
