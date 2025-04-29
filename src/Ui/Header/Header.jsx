@@ -18,6 +18,28 @@ const Header = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
+  // Custom translations for menu items that might not be in the global translation system
+  const customTranslations = {
+    "header.brand": {
+      en: "Our Brand",
+      ru: "Наш Бренд",
+      uz: "Brendimiz"
+    },
+    "header.brandStory": {
+      en: "Brand Story",
+      ru: "История Бренда",
+      uz: "Brend Tarixi"
+    }
+  };
+
+  // Custom getText function that first checks custom translations
+  const getCustomText = (key, lang, fallback) => {
+    if (customTranslations[key] && customTranslations[key][lang]) {
+      return customTranslations[key][lang];
+    }
+    return getText(key, lang, fallback);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -55,6 +77,7 @@ const Header = () => {
   const homeMenuItems = [
     { href: "#services", textKey: "header.services" },
     { href: "#whyus", textKey: "header.whyUs" },
+    { href: "#brand-story", textKey: "header.brandStory" },
     // { href: "#team", textKey: "header.team" },
     { href: "#contact", textKey: "header.contact" }
   ];
@@ -65,11 +88,11 @@ const Header = () => {
     uz: "Do'kon"
   };
 
-  const newsMenuText = {
-    en: "News",
-    ru: "Новости",
-    uz: "Yangiliklar"
-  };
+  // const newsMenuText = {
+  //   en: "News",
+  //   ru: "Новости",
+  //   uz: "Yangiliklar"
+  // };
 
   const cartMenuText = {
     en: "Cart",
@@ -103,7 +126,7 @@ const Header = () => {
                     href={item.href} 
                     onClick={(e) => scrollToSection(e, item.href)}
                   >
-                    {getText(item.textKey, language, item.textKey)}
+                    {getCustomText(item.textKey, language, item.textKey)}
                   </a>
                 </li>
               ))}
@@ -119,7 +142,7 @@ const Header = () => {
                 </Link>
               </li>
               
-              <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 1 : 1}}>
+              {/* <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 1 : 1}}>
                 <Link 
                   className={`nav-item_link ${location.pathname.startsWith('/news') ? 'active' : ''}`} 
                   to="/news"
@@ -133,7 +156,7 @@ const Header = () => {
                   </svg>
                   {newsMenuText[language]}
                 </Link>
-              </li>
+              </li> */}
               
               <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 2 : 2}}>
                 <Link 
@@ -157,7 +180,7 @@ const Header = () => {
               
               <li className="nav-item" style={{"--item-index": isHomePage ? homeMenuItems.length + 5 : 5}}>
                 <Btn 
-                  text={getText("header.freeConsultation", language, "Consultation")} 
+                  text={getCustomText("header.freeConsultation", language, "Consultation")} 
                   onClick={(e) => scrollToSection(e, "#contact")} 
                   className="header-cta-btn" 
                 />

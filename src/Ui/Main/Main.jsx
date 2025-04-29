@@ -14,6 +14,7 @@ const Team = lazy(() => import('./Team/Team'))
 const WhyUs = lazy(() => import('./WhyUs/WhyUs'))
 const Founders = lazy(() => import('./Founders/Founders'))
 const BeforeAfter = lazy(() => import('./BeforeAfter/BeforeAfter'))
+const BrandStory = lazy(() => import('./BrandStory/BrandStory'))
 
 // Loading fallback component
 const SectionLoading = memo(() => (
@@ -38,6 +39,7 @@ const Main = () => {
   const whyUsRef = useIntersectionObserver()
   const foundersRef = useIntersectionObserver()
   const beforeAfterRef = useIntersectionObserver()
+  const brandStoryRef = useIntersectionObserver()
 
   return (
     <main className="main">
@@ -61,6 +63,12 @@ const Main = () => {
         <Suspense fallback={<SectionLoading />}>
           <section ref={whyUsRef} className="fade-in">
             <WhyUs />
+          </section>
+        </Suspense>
+        
+        <Suspense fallback={<SectionLoading />}>
+          <section ref={brandStoryRef} className="fade-in">
+            <BrandStory />
           </section>
         </Suspense>
         

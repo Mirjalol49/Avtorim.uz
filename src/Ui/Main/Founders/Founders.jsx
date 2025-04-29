@@ -33,7 +33,7 @@ const Founders = () => {
       description: {
         en: "Having more than 15 years of experience in the automotive industry, Saidolim leads our company with vision and expertise. He founded Avtorim with a mission to provide quality Chinese auto parts and exceptional service.",
         ru: "Имея более 15 лет опыта в автомобильной индустрии, Саидолим руководит нашей компанией с видением и экспертизой. Он основал Avtorim с миссией предоставлять качественные китайские автозапчасти и исключительный сервис.",
-        uz: `Avtomobil sanoatida 15 yildan ortiq tajribaga ega Saidolim kompaniyamizni uzoqni ko‘ra oladigan va tajribali rahbar sifatida boshqarib kelmoqda. U sifatli Xitoy avtomobil ehtiyot qismlari va ajoyib xizmat ko‘rsatish missiyasi bilan Avtorim kompaniyasiga asos solgan.`
+        uz: `Avtomobil sanoatida 15 yildan ortiq tajribaga ega Saidolim kompaniyamizni uzoqni ko‘ra oladigan va tajribali rahbar sifatida boshqarib kelmoqda. U sifatli Xitoy avtomobil ehtiyot qismlari va ajoyib xizmat ko‘rsatish missiyasi bilan Avtorim kompaniyasini asos solgan.`
       },
       quote: {
         en: "Quality parts and exceptional service are at the heart of everything we do.",
@@ -125,9 +125,49 @@ Kompaniya boshqaruvchisi
                       
                       <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Bog'lanish: <a href="https://www.instagram.com/sayidoliim/" target="_blank" style="color: #3366cc; font-weight: 600; text-decoration: none;">@Sayidoliim</a></p>
                     ` : language === 'ru' ? `
-                      <p style="font-size: 1.05rem; line-height: 1.6;">Имея более 15 лет опыта в автомобильной индустрии, Джахонгир руководит нашей компанией с видением и экспертизой. Он основал Avtorim с миссией предоставлять качественные китайские автозапчасти и исключительный сервис.</p>
+                      <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">Саидолим – специалист с более чем 15-летним опытом в автомобильной индустрии.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Он имеет международный опыт работы (Россия, Корея) и сертификат по дизайну автомобильных салонов.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Основал компанию AVTORIM с целью поставки качественных китайских автозапчастей и предоставления высококачественного сервиса клиентам.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.6;">В настоящее время работает в Китае.</p>
+                      
+                      <p style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #3366cc;">Основные направления:</p>
+                      
+                      <div style="margin-left: 15px; margin-bottom: 25px;">
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🚗 Специализируется на китайских автозапчастях</p>
+                        
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🌍 Международный опыт (Россия, Корея)</p>
+                        
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🏆 Сертификат по дизайну автомобильных салонов</p>
+                        
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🇨🇳 В настоящее время работает в Китае</p>
+                      </div>
+                      
+                      <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Контакт: <a href="https://www.instagram.com/sayidoliim/" target="_blank" style="color: #3366cc; font-weight: 600; text-decoration: none;">@Sayidoliim</a></p>
                     ` : `
-                      <p style="font-size: 1.05rem; line-height: 1.6;">With over 15 years of experience in the automotive industry, Saidolim leads our company with vision and expertise. He founded Avtorim with a mission to provide quality Chinese auto parts and exceptional service.</p>
+                      <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">Saidolim – a specialist with more than 15 years of experience in the automotive industry.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">He has international experience (Russia, Korea) and holds a certificate in automotive salon design.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Founded AVTORIM with the mission to supply quality Chinese auto parts and provide exceptional service to customers.</p>
+                      
+                      <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.6;">Currently working in China.</p>
+                      
+                      <p style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #3366cc;">Key Specializations:</p>
+                      
+                      <div style="margin-left: 15px; margin-bottom: 25px;">
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🚗 Specializes in Chinese auto parts</p>
+                        
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🌍 International experience (Russia, Korea)</p>
+                        
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🏆 Certificate in automotive salon design</p>
+                        
+                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🇨🇳 Currently working in China</p>
+                      </div>
+                      
+                      <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Contact: <a href="https://www.instagram.com/sayidoliim/" target="_blank" style="color: #3366cc; font-weight: 600; text-decoration: none;">@Sayidoliim</a></p>
                     `
                   }}
                 />
@@ -170,18 +210,24 @@ Kompaniya boshqaruvchisi
                       <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Kompaniya boshqaruvchisi</p>
                       
                       <p style="font-size: 1.1rem; font-weight: 600; color: #3366cc; margin-bottom: 15px;">"ALI ALMARSHOUD AUTO PARTS" MCHJ</p>
+                      
+                      <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Bog'lanish: <a href="mailto:bigalmarshoud@gmail.com" style="color: #3366cc; font-weight: 600; text-decoration: none;">bigalmarshoud@gmail.com</a></p>
                     ` : language === 'ru' ? `
                       <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Кувейтский инвестор, получивший степень инженера-механиста в 2006 году в Филадельфийском университете, Иордания.</p>
                       
                       <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">А менеджер компании</p>
                       
                       <p style="font-size: 1.1rem; font-weight: 600; color: #3366cc; margin-bottom: 15px;">ООО "ALI ALMARSHOUD AUTO PARTS"</p>
+                      
+                      <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Контакт: <a href="mailto:bigalmarshoud@gmail.com" style="color: #3366cc; font-weight: 600; text-decoration: none;">bigalmarshoud@gmail.com</a></p>
                     ` : `
                       <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">A Kuwaiti investor who Obtained a mechanical engineering degree in 2006 from Philadelphia University, Jordan.</p>
                       
                       <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">And a company manager</p>
                       
                       <p style="font-size: 1.1rem; font-weight: 600; color: #3366cc; margin-bottom: 15px;">"ALI ALMARSHOUD AUTO PARTS" MCHJ</p>
+                      
+                      <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Contact: <a href="mailto:bigalmarshoud@gmail.com" style="color: #3366cc; font-weight: 600; text-decoration: none;">bigalmarshoud@gmail.com</a></p>
                     `
                   }}
                 />
