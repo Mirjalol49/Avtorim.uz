@@ -1,0 +1,175 @@
+/* 
+ * Responsive Design System for Avtorim.uz
+ * This file contains responsive utilities and variables for consistent responsive behavior
+ */
+
+:root {
+  /* Responsive breakpoints */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  
+  /* Fluid spacing units that scale with viewport */
+  --space-fluid-1: clamp(0.25rem, 0.5vw, 0.5rem);
+  --space-fluid-2: clamp(0.5rem, 1vw, 1rem);
+  --space-fluid-3: clamp(1rem, 2vw, 1.5rem);
+  --space-fluid-4: clamp(1.5rem, 3vw, 2rem);
+  --space-fluid-5: clamp(2rem, 4vw, 3rem);
+  
+  /* Fluid typography */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+  --font-size-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);
+  --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+  
+  /* Container widths */
+  --container-max-width: 1400px;
+  --container-padding: var(--space-fluid-2);
+}
+
+/* Container class with responsive padding */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Responsive grid system */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-fluid-2);
+}
+
+@media (min-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+/* Responsive flex layouts */
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-fluid-2);
+}
+
+/* Responsive visibility classes */
+.hide-xs {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .hide-xs {
+    display: initial;
+  }
+  
+  .show-xs-only {
+    display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .hide-sm-down {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .hide-sm-up {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hide-md-down {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-md-up {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hide-lg-down {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-lg-up {
+    display: none;
+  }
+}
+
+/* Responsive spacing utilities */
+.mt-responsive {
+  margin-top: var(--space-fluid-3);
+}
+
+.mb-responsive {
+  margin-bottom: var(--space-fluid-3);
+}
+
+.my-responsive {
+  margin-top: var(--space-fluid-3);
+  margin-bottom: var(--space-fluid-3);
+}
+
+.p-responsive {
+  padding: var(--space-fluid-3);
+}
+
+/* Responsive text alignment */
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center;
+  }
+}
+
+/* Fluid aspect ratio containers for images and videos */
+.aspect-ratio-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.aspect-ratio-16-9 {
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.aspect-ratio-4-3 {
+  padding-bottom: 75%; /* 4:3 Aspect Ratio */
+}
+
+.aspect-ratio-1-1 {
+  padding-bottom: 100%; /* 1:1 Aspect Ratio (Square) */
+}
+
+.aspect-ratio-container > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -119,9 +119,9 @@ const OrderForm = ({ initialCarName = '', onFormSubmit }) => {
       return false;
     }
     
-    // Basic phone validation
-    const phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
-    if (!phoneRegex.test(formData.phone.trim())) {
+    // Phone validation - accept any number with at least 9 digits
+    const phoneDigits = formData.phone.trim().replace(/\D/g, '');
+    if (phoneDigits.length < 9) {
       setError(translations.invalidPhone[language]);
       return false;
     }
@@ -150,10 +150,13 @@ const OrderForm = ({ initialCarName = '', onFormSubmit }) => {
         }
       };
       
+      console.log('Sending custom part order data:', orderData);
+      
       // Send to Telegram
       const result = await sendOrderToTelegram(orderData);
       
       if (result.success) {
+        console.log('Custom part order successfully sent');
         // Show success toast and reset form
         showSuccessToast(translations.successMessage[language]);
         
@@ -170,6 +173,7 @@ const OrderForm = ({ initialCarName = '', onFormSubmit }) => {
           onFormSubmit(formData);
         }
       } else {
+        console.error('Failed to send custom part order:', result.error);
         showErrorToast(translations.errorMessage[language]);
         setError(translations.errorMessage[language]);
       }

@@ -10,7 +10,7 @@ import './Checkout.css';
 const Checkout = () => {
   const { language } = useLanguage();
   const { cartItems, getCartTotal, clearCart } = useShoppingCart();
-  const { showSuccessModal } = useModal();
+  const { showSuccessModal, showConfirmModal } = useModal();
   const { showErrorToast } = useToast();
   const navigate = useNavigate();
   
@@ -29,6 +29,16 @@ const Checkout = () => {
       en: 'Checkout',
       ru: 'Оформление заказа',
       uz: 'Buyurtmani rasmiylashtirish'
+    },
+    confirmOrder: {
+      en: 'Confirm Order',
+      ru: 'Подтвердите заказ',
+      uz: 'Buyurtmani tasdiqlang'
+    },
+    confirmOrderMessage: {
+      en: 'Are you sure you want to place this order?',
+      ru: 'Вы уверены, что хотите разместить этот заказ?',
+      uz: 'Haqiqatan ham bu buyurtmani joylashtirmoqchimisiz?'
     },
     name: {
       en: 'Full Name',
@@ -155,9 +165,9 @@ const Checkout = () => {
       return false;
     }
     
-    // Basic phone validation
-    const phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
-    if (!phoneRegex.test(formData.phone.trim())) {
+    // Phone validation - accept any number with at least 9 digits
+    const phoneDigits = formData.phone.trim().replace(/\D/g, '');
+    if (phoneDigits.length < 9) {
       setError(translations.invalidPhone[language]);
       return false;
     }
@@ -166,17 +176,7 @@ const Checkout = () => {
     return true;
   };
 
-  const sendOrderToTelegram = async (orderData) => {
-    try {
-      // Use the Telegram utility function
-      const result = await sendOrderViaBot(orderData);
-      return result;
-    } catch (error) {
-      console.error('Error sending order to Telegram', error);
-      throw error;
-    }
-  };
-
+  // We're using sendOrderViaBot directly, so this function is no longer needed
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -186,49 +186,71 @@ const Checkout = () => {
     setError('');
     
     try {
-      // Format item names based on current language
-      const formattedItems = cartItems.map(item => ({
-        id: item.id,
-        name: item.name[language] || item.name,
-        price: item.price,
-        quantity: item.quantity
-      }));
+      // Show confirmation modal
+      showConfirmModal(
+        translations.confirmOrder[language],
+        translations.confirmOrderMessage[language],
+        onConfirm
+      );
+    } catch (err) {
+      console.error('Error submitting order:', err);
+      showErrorToast(translations.orderErrorMessage[language]);
+      setError(translations.orderErrorMessage[language]);
+      setIsSubmitting(false);
+    }
+  };
+  
+  const onConfirm = async () => {
+    try {
+      // Format the order data with proper validation
+      const formattedItems = cartItems.map(item => {
+        // Ensure item has all required properties
+        return {
+          id: item.id || `item-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+          name: item.name || 'Unknown Item',
+          // Ensure price is a number for toFixed() calculation
+          price: typeof item.price === 'number' ? item.price : parseFloat(item.price) || 0,
+          // Ensure quantity is a number
+          quantity: typeof item.quantity === 'number' ? item.quantity : parseInt(item.quantity) || 1,
+          // Include image if available
+          image: item.image || ''
+        };
+      });
       
-      // Prepare order data
       const orderData = {
+        items: formattedItems,
+        totalAmount: getCartTotal(),
         customer: {
           name: formData.name.trim(),
           phone: formData.phone.trim(),
           address: formData.address?.trim() || '',
           comments: formData.comments?.trim() || ''
-        },
-        items: formattedItems,
-        totalAmount: getCartTotal()
+        }
       };
       
-      // Send order to Telegram
-      const result = await sendOrderToTelegram(orderData);
+      console.log('Sending order data:', JSON.stringify(orderData));
+      
+      // Send to Telegram
+      const result = await sendOrderViaBot(orderData);
       
       if (result.success) {
-        // Clear cart after successful order
-        clearCart();
+        console.log('Order successfully sent');
         // Show success modal
         showSuccessModal(
           translations.orderSuccess[language],
           translations.orderDetails[language],
-          {
-            onConfirm: () => {
-              navigate('/shop');
-            }
-          }
+          handleContinueShopping
         );
+        
+        // Clear the cart
+        clearCart();
       } else {
-        // Show error toast
+        console.error('Failed to send order:', result.error);
         showErrorToast(translations.orderErrorMessage[language]);
         setError(translations.orderErrorMessage[language]);
       }
     } catch (err) {
-      console.error('Checkout error:', err);
+      console.error('Error processing order:', err);
       showErrorToast(translations.orderErrorMessage[language]);
       setError(translations.orderErrorMessage[language]);
     } finally {
