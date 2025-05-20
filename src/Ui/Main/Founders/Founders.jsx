@@ -31,9 +31,54 @@ const Founders = () => {
         uz: "Asoschisi va Expert"
       },
       description: {
-        en: "With over 14 years of experience in the automotive industry, Sayidolim leads our company with vision and expertise. He studied automotive service at college for 3 years, worked at an insurance company in Russia for 4 years, received specialized training in sound insulation in Russia for 3 months, and studied automotive interior design at a Korean university for 1 year. He founded Avtorim with a commitment to excellence and quality service. Currently residing in China, he is an expert in spare parts for all Chinese vehicles.",
-        ru: "Имея более 14 лет опыта в автомобильной индустрии, Саидолим руководит нашей компанией с видением и экспертизой. Он учился автомобильному обслуживанию в колледже 3 года, работал в страховой компании в России 4 года, прошел специализированное обучение по шумоизоляции в России 3 месяца и изучал дизайн салона автомобиля в корейском университете 1 год. Он основал Avtorim с приверженностью к совершенству и качественному обслуживанию. В настоящее время проживает в Китае и является экспертом по запчастям для всех китайских автомобилей.",
-        uz: `Avtomobil sohasida 14 yildan ortiq tajribaga ega Sayidolim kompaniyamizni uzoqni ko'ra oladigan va tajribali rahbar sifatida boshqarib kelmoqda. U 3 yil davomida kollejda avtomobillarga xizmat ko'rsatish yo'nalishida tahsil olgan, 4 yil Rossiyadagi sug'urta kompaniyasida faoliyat yuritgan, Rossiyada 3 oy davomida shumizolyatsiya bo'yicha tayyorgarlik ko'rgan, va Koreya universitetida 1 yil davomida avtomobil ichki salon dizayni bo'yicha tahsil olgan. U mukammallik va sifatli xizmat ko'rsatish maqsadida AVTORIM'NI tashkil etgan. Hozirda Xitoyda istiqomat qiladi va barcha Xitoy avtomobillari uchun ehtiyot qismlar bo'yicha ekspertdir.`
+        en: `
+          <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">🚗 With over 14 years of experience in the automotive industry, Sayidolim leads our company with vision and expertise.</p>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">📚 <strong>Education & Experience:</strong></p>
+          
+          <ul style="list-style-type: none; padding-left: 15px; margin-bottom: 20px;">
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🔧 Studied automotive service at college for 3 years</li>
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🏢 Worked at an insurance company in Russia for 4 years</li>
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🔊 Received specialized training in sound insulation in Russia for 3 months</li>
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🎨 Studied automotive interior design at a Korean university for 1 year</li>
+          </ul>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">✨ He founded Avtorim with a commitment to excellence and quality service.</p>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">🇨🇳 Currently residing in China, he is an expert in spare parts for all Chinese vehicles.</p>
+        `,
+        ru: `
+          <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">🚗 Имея более 14 лет опыта в автомобильной индустрии, Саидолим руководит нашей компанией с видением и экспертизой.</p>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">📚 <strong>Образование и опыт:</strong></p>
+          
+          <ul style="list-style-type: none; padding-left: 15px; margin-bottom: 20px;">
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🔧 Учился автомобильному обслуживанию в колледже 3 года</li>
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🏢 Работал в страховой компании в России 4 года</li>
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🔊 Прошел специализированное обучение по шумоизоляции в России 3 месяца</li>
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🎨 Изучал дизайн салона автомобиля в корейском университете 1 год</li>
+          </ul>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">✨ Он основал Avtorim с приверженностью к совершенству и качественному обслуживанию.</p>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">🇨🇳 В настоящее время проживает в Китае и является экспертом по запчастям для всех китайских автомобилей.</p>
+        `,
+        uz: `
+          <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">🚗 Avtomobil sohasida 14 yildan ortiq tajribaga ega Sayidolim kompaniyamizni uzoqni ko'ra oladigan va tajribali rahbar sifatida boshqarib kelmoqda.</p>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">📚 <strong>Ta'lim va tajriba:</strong></p>
+          
+          <ul style="list-style-type: none; padding-left: 15px; margin-bottom: 20px;">
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🔧 3 yil davomida kollejda avtomobillarga xizmat ko'rsatish yo'nalishida tahsil olgan</li>
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🏢 4 yil Rossiyadagi sug'urta kompaniyasida faoliyat yuritgan</li>
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🔊 Rossiyada 3 oy davomida shumizolyatsiya bo'yicha tayyorgarlik ko'rgan</li>
+            <li style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5;">🎨 Koreya universitetida 1 yil davomida avtomobil ichki salon dizayni bo'yicha tahsil olgan</li>
+          </ul>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">✨ U mukammallik va sifatli xizmat ko'rsatish maqsadida AVTORIM'NI tashkil etgan.</p>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">🇨🇳 Hozirda Xitoyda istiqomat qiladi va barcha Xitoy avtomobillari uchun ehtiyot qismlar bo'yicha ekspertdir.</p>
+        `
       },
       quote: {
         en: "Quality parts and exceptional service are at the heart of everything we do.",
@@ -103,9 +148,12 @@ Kompaniya boshqaruvchisi
               <div className="leadership-details">
                 <h3 className="leadership-name">{translations.founder.name}</h3>
                 <p className="leadership-position">{translations.founder.position[language]}</p>
-                <p className="leadership-description">
-                  {translations.founder.description[language]}
-                </p>
+                <div 
+                  className="leadership-description"
+                  dangerouslySetInnerHTML={{
+                    __html: translations.founder.description[language]
+                  }}
+                />
                 <div className="leadership-social">
                   <a href={`https://instagram.com/${translations.founder.social.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="social-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
