@@ -24,21 +24,24 @@ const Founders = () => {
       uz: "Avtorim ortidagi g'oyachilar"
     },
     founder: {
-      name: "Saidolim Tojiboyev",
+      name: "Sayidolim Tojiboev",
       position: {
         en: "Founder & Expert",
         ru: "Основатель и Эксперт",
         uz: "Asoschisi va Expert"
       },
       description: {
-        en: "Having more than 15 years of experience in the automotive industry, Saidolim leads our company with vision and expertise. He founded Avtorim with a mission to provide quality Chinese auto parts and exceptional service.",
-        ru: "Имея более 15 лет опыта в автомобильной индустрии, Саидолим руководит нашей компанией с видением и экспертизой. Он основал Avtorim с миссией предоставлять качественные китайские автозапчасти и исключительный сервис.",
-        uz: `Avtomobil sanoatida 15 yildan ortiq tajribaga ega Saidolim kompaniyamizni uzoqni ko‘ra oladigan va tajribali rahbar sifatida boshqarib kelmoqda. U sifatli Xitoy avtomobil ehtiyot qismlari va ajoyib xizmat ko‘rsatish missiyasi bilan Avtorim kompaniyasini asos solgan.`
+        en: "With over 14 years of experience in the automotive industry, Sayidolim leads our company with vision and expertise. He studied automotive service at college for 3 years, worked at an insurance company in Russia for 4 years, received specialized training in sound insulation in Russia for 3 months, and studied automotive interior design at a Korean university for 1 year. He founded Avtorim with a commitment to excellence and quality service. Currently residing in China, he is an expert in spare parts for all Chinese vehicles.",
+        ru: "Имея более 14 лет опыта в автомобильной индустрии, Саидолим руководит нашей компанией с видением и экспертизой. Он учился автомобильному обслуживанию в колледже 3 года, работал в страховой компании в России 4 года, прошел специализированное обучение по шумоизоляции в России 3 месяца и изучал дизайн салона автомобиля в корейском университете 1 год. Он основал Avtorim с приверженностью к совершенству и качественному обслуживанию. В настоящее время проживает в Китае и является экспертом по запчастям для всех китайских автомобилей.",
+        uz: `Avtomobil sohasida 14 yildan ortiq tajribaga ega Sayidolim kompaniyamizni uzoqni ko'ra oladigan va tajribali rahbar sifatida boshqarib kelmoqda. U 3 yil davomida kollejda avtomobillarga xizmat ko'rsatish yo'nalishida tahsil olgan, 4 yil Rossiyadagi sug'urta kompaniyasida faoliyat yuritgan, Rossiyada 3 oy davomida shumizolyatsiya bo'yicha tayyorgarlik ko'rgan, va Koreya universitetida 1 yil davomida avtomobil ichki salon dizayni bo'yicha tahsil olgan. U mukammallik va sifatli xizmat ko'rsatish maqsadida AVTORIM'NI tashkil etgan. Hozirda Xitoyda istiqomat qiladi va barcha Xitoy avtomobillari uchun ehtiyot qismlar bo'yicha ekspertdir.`
       },
       quote: {
         en: "Quality parts and exceptional service are at the heart of everything we do.",
         ru: "Качественные запчасти и исключительный сервис — в основе всего, что мы делаем.",
         uz: "Sifatli qismlar va ajoyib xizmat — biz qiladigan hamma narsaning asosida."
+      },
+      social: {
+        instagram: "@Sayidoliim"
       }
     },
     investor: {
@@ -99,78 +102,20 @@ Kompaniya boshqaruvchisi
               </div>
               <div className="leadership-details">
                 <h3 className="leadership-name">{translations.founder.name}</h3>
-                <div 
-                  className="leadership-description"
-                  dangerouslySetInnerHTML={{
-                    __html: language === 'uz' ? `
-                      <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">Sayidolim – 15 yildan ortiq avtomobilsozlik tajribasiga ega mutaxassis.</p>
-                      
-                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">U xalqaro tajribaga (Rossiya, Koreya) ega bo'lib, avtomobil salon dizayni bo'yicha sertifikatga ega.</p>
-                      
-                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Xitoy avtomobil ehtiyot qismlarini yetkazib berish va mijozlarga yuqori sifatli xizmat ko'rsatish maqsadida AVTORIM kompaniyasini asos solgan.</p>
-                      
-                      <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.6;">Hozirda Xitoyda faoliyat yuritmoqda.</p>
-                      
-                      <p style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #3366cc;">Asosiy yo'nalishlari:</p>
-                      
-                      <div style="margin-left: 15px; margin-bottom: 25px;">
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🚗 Xitoy avtomobil qismlariga ixtisoslashgan</p>
-                        
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🌍 Xalqaro tajriba (Rossiya, Koreya)</p>
-                        
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🏆 Avtomobil salon dizayni bo'yicha sertifikat</p>
-                        
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🇨🇳 Hozirda Xitoyda ishlaydi</p>
-                      </div>
-                      
-                      <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Bog'lanish: <a href="https://www.instagram.com/sayidoliim/" target="_blank" style="color: #3366cc; font-weight: 600; text-decoration: none;">@Sayidoliim</a></p>
-                    ` : language === 'ru' ? `
-                      <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">Саидолим – специалист с более чем 15-летним опытом в автомобильной индустрии.</p>
-                      
-                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Он имеет международный опыт работы (Россия, Корея) и сертификат по дизайну автомобильных салонов.</p>
-                      
-                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Основал компанию AVTORIM с целью поставки качественных китайских автозапчастей и предоставления высококачественного сервиса клиентам.</p>
-                      
-                      <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.6;">В настоящее время работает в Китае.</p>
-                      
-                      <p style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #3366cc;">Основные направления:</p>
-                      
-                      <div style="margin-left: 15px; margin-bottom: 25px;">
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🚗 Специализируется на китайских автозапчастях</p>
-                        
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🌍 Международный опыт (Россия, Корея)</p>
-                        
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🏆 Сертификат по дизайну автомобильных салонов</p>
-                        
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🇨🇳 В настоящее время работает в Китае</p>
-                      </div>
-                      
-                      <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Контакт: <a href="https://www.instagram.com/sayidoliim/" target="_blank" style="color: #3366cc; font-weight: 600; text-decoration: none;">@Sayidoliim</a></p>
-                    ` : `
-                      <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.6;">Saidolim – a specialist with more than 15 years of experience in the automotive industry.</p>
-                      
-                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">He has international experience (Russia, Korea) and holds a certificate in automotive salon design.</p>
-                      
-                      <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.6;">Founded AVTORIM with the mission to supply quality Chinese auto parts and provide exceptional service to customers.</p>
-                      
-                      <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.6;">Currently working in China.</p>
-                      
-                      <p style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #3366cc;">Key Specializations:</p>
-                      
-                      <div style="margin-left: 15px; margin-bottom: 25px;">
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🚗 Specializes in Chinese auto parts</p>
-                        
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🌍 International experience (Russia, Korea)</p>
-                        
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🏆 Certificate in automotive salon design</p>
-                        
-                        <p style="font-size: 1.05rem; margin-bottom: 12px; line-height: 1.5;">🇨🇳 Currently working in China</p>
-                      </div>
-                      
-                      <p style="font-size: 1.05rem; font-weight: 500; margin-top: 5px;">📱 Contact: <a href="https://www.instagram.com/sayidoliim/" target="_blank" style="color: #3366cc; font-weight: 600; text-decoration: none;">@Sayidoliim</a></p>
-                    `
-                  }}
-                />
+                <p className="leadership-position">{translations.founder.position[language]}</p>
+                <p className="leadership-description">
+                  {translations.founder.description[language]}
+                </p>
+                <div className="leadership-social">
+                  <a href={`https://instagram.com/${translations.founder.social.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span>{translations.founder.social.instagram}</span>
+                  </a>
+                </div>
                 <div className="leadership-quote">
                   <svg className="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <path fill="currentColor" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
